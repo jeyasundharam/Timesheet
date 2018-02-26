@@ -1,0 +1,20 @@
+<h1>List Of projects</h1>
+<table>
+<tr>
+<th>Title</th>
+<th>Descriptions</th>
+<th>Operations</th>
+</tr>
+<% @projects.each do |i| %>
+<tr>
+ <td><%= i.title %></td>
+ <td><%= i.description %></td>
+ <td>
+   <%= link_to "Add Task",:controller => "task",:action=>"insert",:id=>i.id %>
+   <%= link_to "Edit",:controller => "project",:action=>"edit",:id=>i.id %>
+   <%= link_to "Remove",:controller => "project",:action=>"new",:id=>i.id %>
+ </td>
+</tr>  
+<% end %>
+
+</table>

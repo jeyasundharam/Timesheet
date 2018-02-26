@@ -1,0 +1,10 @@
+<h1>Task#insert</h1>
+<%= nested_form_for @project do |f| %>
+  <%= f.fields_for :tasks do |task_form| %>   
+  <%= task_form.text_field :title %>  
+  <%= task_form.text_field :description %>
+  <%= task_form.text_field :hours %>
+  <%= task_form.link_to_remove "Remove this task" %>
+<% end %>
+<p><%= f.link_to_add "Add a task", :tasks %></p>
+<% end %>

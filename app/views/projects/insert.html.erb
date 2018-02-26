@@ -1,0 +1,9 @@
+<h1>Insert new project</h1>
+<hr>
+<%= form_for @project,url: {:action => "create"} do |form| %>
+<table>
+<tr><td>Title</td><td><%= form.text_field :title %></td></tr>
+<tr><td>Description</td><td><%= form.text_area :description, rows:5, cols:30 %></td></tr>
+<tr><td colspan=2 align=center><%= form.submit :"Add Project" %>
+</table>
+<% end %>
