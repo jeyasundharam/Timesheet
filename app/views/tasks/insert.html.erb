@@ -1,10 +1,35 @@
-<h1>Task#insert</h1>
-<%= nested_form_for @project do |f| %>
-  <%= f.fields_for :tasks do |task_form| %>   
-  <%= task_form.text_field :title %>  
-  <%= task_form.text_field :description %>
-  <%= task_form.text_field :hours %>
-  <%= task_form.link_to_remove "Remove this task" %>
+<h1> <%= @projects.title %> Task Details</h1>
+<table border=1>
+<tr><td>Title :</td><td> <%= @projects.title %></td></tr>
+<tr><td>Description :</td><td> <%= @projects.description %></td></tr>
+</table>
+<h1>Tasks</h1>
+<table border=1>
+<tr><th>Title </th><th>Description </th><th>Estimated Hours </th>
+<th>Status</th>
+</tr>
+<% @projects.tasks.each do |i| %>
+<tr><td><%= i.title %></td><td><%= i.description %></td><td><%= i.hours %></td>
+<td>
+   <%= link_to "Task Finished",:controller => "tasks",:action=>"delete",:id=>i.id %> 
+</td>
+</tr>
 <% end %>
+</table>
+
+<%= nested_form_for @project,url: 'update' do |f| %>
+ <%= f.hidden_field :id, value:@projects.id %>
+<table>
+  <%= f.fields_for :tasks do |task_form| %>
+   
+    <tr class="fields">
+  <tr><td>Title</td><td><%= task_form.text_field :title %></td></tr>
+  <tr><td>Description</td><td><%= task_form.text_field :description %></td></tr>
+  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours %></td></tr> 
+      <td><%= task_form.link_to_remove "Remove this task" %></td>
+    </tr>
+  <% end %>
+</table>
 <p><%= f.link_to_add "Add a task", :tasks %></p>
+<%= f.submit :Create %>
 <% end %>

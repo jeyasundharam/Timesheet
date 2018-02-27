@@ -39,8 +39,24 @@ class ProjectsController < ApplicationController
     else
       flash[:notice]="Project Not Deleted"
     end
-    redirect_to project_show_url
+    redirect_to projects_show_url
   end
+
+  def update
+    @project=Project.find(params[:id])
+    if @project.update_attributes(task_params)
+      flash[:notice]="Task Upgraded"
+    else
+      flash[:notice]="Task Not Upgraded"
+    end
+    render "show"
+  end
+
+  private
+  def task_params
+     params.require(:project).permit(:title,:description,tasks_attributes: [:title,:description,:hours])
+  end
+
 
   def project_params
     params.require(:project).permit(:title,:description)

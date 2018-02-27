@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-  belongs_to :project,required:false
+  belongs_to :project
 end

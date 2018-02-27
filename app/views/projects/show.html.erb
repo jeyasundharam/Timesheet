@@ -10,9 +10,9 @@
  <td><%= i.title %></td>
  <td><%= i.description %></td>
  <td>
-   <%= link_to "Add Task",:controller => "task",:action=>"insert",:id=>i.id %>
-   <%= link_to "Edit",:controller => "project",:action=>"edit",:id=>i.id %>
-   <%= link_to "Remove",:controller => "project",:action=>"new",:id=>i.id %>
+   <%= link_to "View Project",:controller => "tasks",:action=>"insert",:id=>i.id %>
+   <%= link_to "Edit",:controller => "projects",:action=>"edit",:id=>i.id %>
+   <%= link_to "Remove",:controller => "projects",:action=>"new",:id=>i.id %>
  </td>
 </tr>  
 <% end %>

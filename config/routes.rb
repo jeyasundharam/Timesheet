@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get 'tasks/index'
 
   get 'tasks/insert'
@@ -19,24 +20,11 @@ Rails.application.routes.draw do
 
   get 'projects/delete'
 
-  get 'task/index'
+  post 'tasks/update', to: 'tasks#update', as: 'projects_update'
 
-  get 'task/insert'
+  resources :projects,:tasks
 
-  get 'task/show'
-
-  get 'task/edit'
-
-  get 'project/index'
-
-  get 'project/insert'
-
-  get 'project/show'
-
-  get 'project/edit'
-  resources :project
-
-  root 'project#insert'
+  root 'projects#insert'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

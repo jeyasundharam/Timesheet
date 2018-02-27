@@ -3,15 +3,19 @@
   <head>
     <title>Projecttasks</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
   </head>
 
 
   <body>
+   <center>
+   <h1>Project Shedule</h1>
+    <%= link_to "New",:controller => "projects",:action=>"insert" %>
+    <%= link_to "Show",:controller => "projects",:action=>"show" %>
+    <br>
     <%= flash[:notice] %>
-    <center>
     <%= yield %>
   </body>
 </html>
