@@ -16,6 +16,21 @@
 </tr>
 <% end %>
 </table>
+<% if @project.errors.any? %>
+    <hr>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@project.errors.count, "error") %> 
+        prohibited  this Task from being saved:
+      </h2>
+      <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<hr>
+<% end %>
 
 <%= nested_form_for @project,url: 'update' do |f| %>
  <%= f.hidden_field :id, value:@projects.id %>
@@ -30,6 +45,8 @@
     </tr>
   <% end %>
 </table>
+<p>
+</p>
 <p><%= f.link_to_add "Add a task", :tasks %></p>
 <%= f.submit :Create %>
 <% end %>

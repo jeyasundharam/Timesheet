@@ -1,13 +1,10 @@
 class ProjectsController < ApplicationController
-
-  def delete
-  end
+  
   def index
-
   end
 
   def insert
-   @project=Project.new
+    @project=Project.new
   end
 
   def show
@@ -15,24 +12,9 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+ 
   end
-
-  def edit
-   @project=Project.find(params[:id])
-  end
-
-  def create
-    @project=Project.new(project_params)
-    if @project.save
-      flash[:notice]="Project Added"
-    else
-      flash[:notice]="Project Not Added"
-    end   
-   @projects=Project.all
-    render "show"
-  end
-
-  def new
+  def delete
     @project=Project.find(params[:id])
     if @project.destroy
       flash[:notice]="Project Deleted"
@@ -42,24 +24,44 @@ class ProjectsController < ApplicationController
     redirect_to projects_show_url
   end
 
-  def update
-    @project=Project.find(params[:id])
-    if @project.update_attributes(task_params)
-      flash[:notice]="Task Upgraded"
+
+  def edit
+   @project=Project.find(params[:id])
+  end
+
+  def create
+    @project=Project.new(project_params)
+    # @project=Project.create(:title=>i["title"],:description=>i[])
+    if @project.save
+      flash[:notice]="Project Added"
     else
-      flash[:notice]="Task Not Upgraded"
-    end
+      flash[:notice]="Project Not Added"
+    end   
+   @projects=Project.all
     render "show"
   end
 
-  private
-  def task_params
-     params.require(:project).permit(:title,:description,tasks_attributes: [:title,:description,:hours])
+  def multitasks
+    @project=Project.new
   end
+  def new
+    end
 
-
+  def update
+    @tasks=params[:project][:tasks_attributes]
+    @tasks.each do |i|
+      j = @tasks[i]
+      @task=Task.create(
+        :project_id => j["project_id"],
+        :title=>j["title"],
+        :description=>j["description"],
+        :hours=>j["hours"]
+      )
+      @task.save      
+    end
+    render "index"
+  end
   def project_params
     params.require(:project).permit(:title,:description)
   end
-
 end

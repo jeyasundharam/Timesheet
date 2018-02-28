@@ -20,7 +20,11 @@ Rails.application.routes.draw do
 
   get 'projects/delete'
 
-  post 'tasks/update', to: 'tasks#update', as: 'projects_update'
+  get 'projects/multitasks', to: 'projects#multitasks', as: 'projects_update_tasks'
+
+  post 'projects/update', to: 'projects#update', as: 'projects_update'
+
+  post 'tasks/update', to: 'tasks#update', as: 'tasks_update'
 
   resources :projects,:tasks
 

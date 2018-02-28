@@ -12,8 +12,8 @@
  <td>
    <%= link_to "View Project",:controller => "tasks",:action=>"insert",:id=>i.id %>
    <%= link_to "Edit",:controller => "projects",:action=>"edit",:id=>i.id %>
-   <%= link_to "Remove",:controller => "projects",:action=>"new",:id=>i.id %>
- </td>
+   <%= link_to "Remove",:controller => "projects",:action=>"delete",:id=>i.id %>
+  </td>
 </tr>  
 <% end %>
 
