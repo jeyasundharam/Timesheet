@@ -4,6 +4,7 @@ class CreateTasks < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :description
       t.decimal :hours
+      t.date :taskdate
       t.references :project, foreign_key: true
 
       t.timestamps

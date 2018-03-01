@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
   def destroy
  
   end
+
   def delete
     @project=Project.find(params[:id])
     if @project.destroy
@@ -24,43 +25,78 @@ class ProjectsController < ApplicationController
     redirect_to projects_show_url
   end
 
-
   def edit
    @project=Project.find(params[:id])
   end
 
   def create
-    @project=Project.new(project_params)
-    # @project=Project.create(:title=>i["title"],:description=>i[])
+    @project = Project.new(project_params)
     if @project.save
-      flash[:notice]="Project Added"
-    else
-      flash[:notice]="Project Not Added"
-    end   
-   @projects=Project.all
-    render "show"
+      flash[:notice]="Project Added Successfully"
+ 	   redirect_to projects_insert_url
+ 	  else
+ 	   flash[:notice]="Project Not Added "
+           render "insert" 
+  	end
   end
 
   def multitasks
     @project=Project.new
   end
-  def new
-    end
 
+  def showtasks
+    @projects=Project.all
+  end
+  
+  def new
+  end
+
+  def updateproject
+    @project=Project.find(params[:project][:id])
+    if @project.update_attributes(project_params)
+      flash[:notice]="Project Updated"
+    else
+      flash[:notice]="Project Not updated"
+    end
+    redirect_to projects_show_url
+  end
+  
   def update
+    taskdate=params[:obj][:taskdate]
     @tasks=params[:project][:tasks_attributes]
+    @errors=Array.new()
+    sum=0;
     @tasks.each do |i|
       j = @tasks[i]
-      @task=Task.create(
-        :project_id => j["project_id"],
-        :title=>j["title"],
-        :description=>j["description"],
-        :hours=>j["hours"]
-      )
-      @task.save      
+      sum+=j["hours"].to_i
     end
-    render "index"
+    remaining=8-Task.where(:taskdate => taskdate).sum(:hours)
+    if sum > 8 || sum > remaining
+       @errors<<"Task Not Updated"
+       if sum > 8
+        @errors<<"Total Hours should be not exceed 8 hours "
+      end 
+      if sum > remaining
+        @errors<<"Your Task date had only #{remaining} hours your tasks"
+      end
+      @project=Project.new()
+      render "multitasks"
+    else
+      @tasks.each do |i|
+        j = @tasks[i]
+        @task=Task.create(
+          :project_id => j["project_id"],
+          :taskdate=>taskdate,
+          :title=>j["title"],
+          :description=>j["description"],
+          :hours=>j["hours"]
+        )
+         @task.save
+      end  
+      redirect_to projects_showtasks_url
+    end
   end
+  
   def project_params
     params.require(:project).permit(:title,:description)
   end

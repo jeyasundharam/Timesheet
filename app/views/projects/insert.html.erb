@@ -1,7 +1,24 @@
+
 <h1>Insert new project</h1>
 <hr>
-<%= form_for @project,url: {:action => "create"} ,local: true do |form| %>
-<table>
+<% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@project.errors.count, "error") %> 
+      prohibited  this Student from being saved:
+      </h2>
+      <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<hr>
+
+<%= form_for @project, url: projects_path do |form| %>
+<table border=1>
+   
 <tr><td>Title</td><td><%= form.text_field :title %></td></tr>
 <tr><td>Description</td><td><%= form.text_area :description, rows:5, cols:30 %></td></tr>
 <tr><td colspan=2 align=center><%= form.submit :"Add Project" %>

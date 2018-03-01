@@ -5,8 +5,7 @@ class TasksController < ApplicationController
   def insert
     @projects=Project.find(params[:id])
     @project=Project.new
-  end
-
+   end
   def show
     
   end
@@ -33,21 +32,22 @@ class TasksController < ApplicationController
     @projects=Project.find(params[:project][:id])
     @project=Project.new
     render "insert"
- end
+  end
   def update
+    @projects=Project.find(params[:project][:id])
     @project=Project.find(params[:project][:id])
     if @project.update_attributes(task_params)
       flash[:notice]="Task Upgraded"
     else
       flash[:notice]="Task Not Upgraded"
+      @errors=@project.errors
     end
-    @projects=Project.find(params[:project][:id])
     @project=Project.new
     render "insert"
   end
 
   private
   def task_params
-     params.require(:project).permit(:title,:description,tasks_attributes: [:title,:description,:hours])
+     params.require(:project).permit(tasks_attributes: [:taskdate,:title,:description,:hours])
   end
 end

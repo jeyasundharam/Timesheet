@@ -1,2 +1,21 @@
-<h1>Project#edit</h1>
-<p>Find me in app/views/project/edit.html.erb</p>
+
+<%= form_for @project, url: {:action => "updateproject"} do |form| %>
+<table border=1>
+ <% if @project.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@project.errors.count, "error") %> prohibited this  project from being saved:</h2>
+ 
+    <ul>
+    <% @project.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+   
+<%= form.hidden_field :id %>
+<tr><td>Title</td><td><%= form.text_field :title %></td></tr>
+<tr><td>Description</td><td><%= form.text_area :description, rows:5, cols:30 %></td></tr>
+<tr><td colspan=2 align=center><%= form.submit :"Update Project" %>
+</table>
+<% end %>

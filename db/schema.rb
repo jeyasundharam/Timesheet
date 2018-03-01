@@ -24,11 +24,12 @@ ActiveRecord::Schema.define(version: 20180226110153) do
     t.string "title"
     t.text "description"
     t.decimal "hours", precision: 10
+    t.date "taskdate"
     t.bigint "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
-  
+
   add_foreign_key "tasks", "projects"
 end

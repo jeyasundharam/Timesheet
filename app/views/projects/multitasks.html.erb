@@ -1,7 +1,24 @@
 <h1> Multi Tasks With with  Multi Project</h1> 
 
+<% if @errors %>
+    <hr>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@errors.count, "error") %> 
+        prohibited  this Task from being saved:
+      </h2>
+      <ul>
+        <% @errors.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+   </div>
+<% end %>
+<hr>
+
 <%= nested_form_for @project,url: 'update' do |f| %>
 
+  select Task date : <%= date_field(:obj, :taskdate) %>
   <%= f.fields_for :tasks do |task_form| %>
   <table border=1>
   <tr><td>Project title</td><td>

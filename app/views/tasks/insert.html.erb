@@ -16,15 +16,15 @@
 </tr>
 <% end %>
 </table>
-<% if @project.errors.any? %>
+<% if @errors %>
     <hr>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@project.errors.count, "error") %> 
+        <%= pluralize(@errors.count, "error") %> 
         prohibited  this Task from being saved:
       </h2>
       <ul>
-        <% @project.errors.full_messages.each do |msg| %>
+        <% @errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -33,14 +33,16 @@
 <% end %>
 
 <%= nested_form_for @project,url: 'update' do |f| %>
+
  <%= f.hidden_field :id, value:@projects.id %>
 <table>
   <%= f.fields_for :tasks do |task_form| %>
    
     <tr class="fields">
+  <tr><td>Selectdate</td><td><%= task_form.date_field :taskdate %></td></tr>
   <tr><td>Title</td><td><%= task_form.text_field :title %></td></tr>
   <tr><td>Description</td><td><%= task_form.text_field :description %></td></tr>
-  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours %></td></tr> 
+  <tr><td>Task Hours</td><td><%= task_form.text_field :hours %></td></tr> 
       <td><%= task_form.link_to_remove "Remove this task" %></td>
     </tr>
   <% end %>
