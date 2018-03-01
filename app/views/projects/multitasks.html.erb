@@ -18,7 +18,12 @@
 
 <%= nested_form_for @project,url: 'update' do |f| %>
 
-  select Task date : <%= date_field(:obj, :taskdate) %>
+  select Task date : 
+  <% if @taskdate %>
+    <%= date_field(:obj, :taskdate, :value => @taskdate) %>
+  <% else %>
+    <%= date_field(:obj, :taskdate) %>
+  <% end %>
   <%= f.fields_for :tasks do |task_form| %>
   <table border=1>
   <tr><td>Project title</td><td>

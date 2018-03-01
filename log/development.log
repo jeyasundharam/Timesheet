@@ -23379,3 +23379,669 @@ Can't verify CSRF token authenticity.
 Completed 200 OK in 184ms (Views: 161.5ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-01 19:34:49 +0530
+  [1m[35m (321.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (18.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  Rendered projects/multitasks.html.erb within layouts/application (420.5ms)
+Completed 500 Internal Server Error in 754ms (ActiveRecord: 126.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `taskdate' for #<#<Class:0x00007fa7dca1a050>:0x00007fa7dca2bd00>
+Did you mean?  task_path):
+    19: <%= nested_form_for @project,url: 'update' do |f| %>
+    20: 
+    21:   select Task date : 
+    22:   <% if taskdate %>
+    23:     <%= date_field(:obj, :taskdate, :value => taskdate) %>
+    24:   <% else %>
+    25:     <%= date_field(:obj, :taskdate) %>
+  
+app/views/projects/multitasks.html.erb:22:in `block in _app_views_projects_multitasks_html_erb__2867384262896469794_70179468924620'
+app/views/projects/multitasks.html.erb:19:in `_app_views_projects_multitasks_html_erb__2867384262896469794_70179468924620'
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-01 19:36:13 +0530
+  [1m[35m (34.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (194.9ms)
+Completed 200 OK in 2348ms (Views: 2286.0ms | ActiveRecord: 43.3ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 19:36:52 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87NV5ifnwABOgmN6f7JxtdPqdeYrqFynIANBmt9v8/fJcCkY1qYK+nNj3KJCl00ES/uNqh3vt6HUQv8LryCLUQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519913193669"=>{"project_id"=>"1", "title"=>"iuerf", "description"=>"iub", "hours"=>"2", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (76.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  Rendered projects/multitasks.html.erb within layouts/application (461.7ms)
+Completed 500 Internal Server Error in 621ms (ActiveRecord: 76.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `taskdate' for #<#<Class:0x00007fa7dc920e60>:0x00007fa7dca89c20>
+Did you mean?  @taskdate):
+    20: 
+    21:   select Task date : 
+    22:   <% if @taskdate %>
+    23:     <%= date_field(:obj, :taskdate, :value => taskdate) %>
+    24:   <% else %>
+    25:     <%= date_field(:obj, :taskdate) %>
+    26:   <% end %>
+  
+app/views/projects/multitasks.html.erb:23:in `block in _app_views_projects_multitasks_html_erb__2867384262896469794_70179469021300'
+app/views/projects/multitasks.html.erb:19:in `_app_views_projects_multitasks_html_erb__2867384262896469794_70179469021300'
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 19:37:23 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87NV5ifnwABOgmN6f7JxtdPqdeYrqFynIANBmt9v8/fJcCkY1qYK+nNj3KJCl00ES/uNqh3vt6HUQv8LryCLUQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519913193669"=>{"project_id"=>"1", "title"=>"iuerf", "description"=>"iub", "hours"=>"2", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (30.4ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (25.6ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (276.8ms)
+Completed 200 OK in 394ms (Views: 100.5ms | ActiveRecord: 286.2ms)
+
+
+Started GET "/projects/update" for 127.0.0.1 at 2018-03-01 19:38:24 +0530
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"update"}
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/show.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 153ms (Views: 126.0ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-01 19:38:27 +0530
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 151ms (Views: 125.0ms | ActiveRecord: 24.1ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 20:15:02 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fa5lmMCjWAf3mhxzfdiQBto/RJZDR48YTc3qBi8b36wvbRlmMeKS/cp7o6tA/ay3Qi682nUAZB65jFSXX1SnCg==", "obj"=>{"taskdate"=>""}, "project"=>{"tasks_attributes"=>{"1519913324617"=>{"project_id"=>"1", "title"=>"uig", "description"=>"", "hours"=>"", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (1108.3ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = NULL[0m
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-01 20:16:07 +0530
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (1014.4ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (17843.6ms)
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-01 20:17:09 +0530
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[35m (683.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mProject Load (848.1ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (11889.1ms)
+Completed 500 Internal Server Error in 152172ms (ActiveRecord: 1108.3ms)
+
+
+  
+NameError (undefined local variable or method `taskdate' for #<ProjectsController:0x00007fa7e18f4810>
+Did you mean?  @taskdate):
+  
+app/controllers/projects_controller.rb:89:in `block in update'
+app/controllers/projects_controller.rb:85:in `update'
+Completed 200 OK in 43553ms (Views: 41898.0ms | ActiveRecord: 1531.9ms)
+
+
+Completed 200 OK in 104598ms (Views: 101700.7ms | ActiveRecord: 1014.4ms)
+
+
+Started GET "/projects/showtasks" for 127.0.0.1 at 2018-03-01 20:21:30 +0530
+Processing by ProjectsController#showtasks as HTML
+  Rendering projects/showtasks.html.erb within layouts/application
+  [1m[36mProject Load (655.2ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[35m (231.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[36mTask Load (47.9ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[35m (28.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 2[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 3[0m
+  Rendered projects/showtasks.html.erb within layouts/application (3294.8ms)
+Completed 200 OK in 3671ms (Views: 2646.8ms | ActiveRecord: 963.7ms)
+
+
+Started GET "/projects/showtasks" for 127.0.0.1 at 2018-03-01 23:09:17 +0530
+  [1m[35m (362.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (116.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#showtasks as HTML
+  Rendering projects/showtasks.html.erb within layouts/application
+  [1m[36mProject Load (948.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[35m (138.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[36mTask Load (24.4ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 2[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 3[0m
+  Rendered projects/showtasks.html.erb within layouts/application (2030.5ms)
+Completed 200 OK in 4219ms (Views: 2391.4ms | ActiveRecord: 1656.8ms)
+
+
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-01 23:09:40 +0530
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 203ms (Views: 152.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:10:06 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (58.1ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  Rendered projects/multitasks.html.erb within layouts/application (44.7ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 58.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    16: <% end %>
+    17: <hr>
+    18: 
+    19: <%= nested_form_for @project,url: 'update' do |f| %>
+    20: 
+    21:   select Task date : 
+    22:   <% if @taskdate %>
+  
+app/views/projects/multitasks.html.erb:19:in `_app_views_projects_multitasks_html_erb__1070481815412500020_70342821539280'
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:11:55 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  Rendered projects/multitasks.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 122.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<ActionController::Parameters:0x00007ff3ed77e2a8>):
+    16: <% end %>
+    17: <hr>
+    18: 
+    19: <%= nested_form_for @project,url: 'update' do |f| %>
+    20: 
+    21:   select Task date : 
+    22:   <% if @taskdate %>
+  
+app/views/projects/multitasks.html.erb:19:in `_app_views_projects_multitasks_html_erb__1070481815412500020_70342818554860'
+app/controllers/projects_controller.rb:84:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:15:23 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (198.3ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 2069ms (ActiveRecord: 1650.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342817892200) expected, got "1519925997073" which is an instance of String(#46916298333720)):
+  
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:17:15 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `tasks' for nil:NilClass):
+  
+app/controllers/projects_controller.rb:72:in `block in update'
+app/controllers/projects_controller.rb:70:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:17:39 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 5.4ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342823736220) expected, got <ActionController::Parameters {"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"} permitted: false> which is an instance of ActionController::Parameters(#46916307767220)):
+  
+app/controllers/projects_controller.rb:72:in `block in update'
+app/controllers/projects_controller.rb:70:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:18:15 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342823965280) expected, got <ActionController::Parameters {"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"} permitted: false> which is an instance of ActionController::Parameters(#46916307767220)):
+  
+app/controllers/projects_controller.rb:72:in `block in update'
+app/controllers/projects_controller.rb:70:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:19:06 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 3.2ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342824015280) expected, got <ActionController::Parameters {"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"} permitted: false> which is an instance of ActionController::Parameters(#46916307767220)):
+  
+app/controllers/projects_controller.rb:72:in `block in update'
+app/controllers/projects_controller.rb:70:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:19:57 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `push' for nil:NilClass):
+  
+app/controllers/projects_controller.rb:72:in `block in update'
+app/controllers/projects_controller.rb:70:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:20:53 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 15.0ms)
+
+
+  
+NoMethodError (undefined method `<<' for nil:NilClass):
+  
+app/controllers/projects_controller.rb:72:in `block in update'
+app/controllers/projects_controller.rb:70:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:22:22 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (26.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Exists (103.2ms)[0m  [1m[34mSELECT  1 AS one FROM `projects` WHERE `projects`.`title` IS NULL LIMIT 1[0m
+  [1m[35m (8.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 1637ms (ActiveRecord: 145.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342824180100) expected, got "1519925997073" which is an instance of String(#46916298333720)):
+  
+app/controllers/projects_controller.rb:70:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:25:23 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (147.6ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 148.5ms)
+
+
+  
+NoMethodError (undefined method `tasks' for #<ActionController::Parameters:0x00007ff3ee5cf1b8>):
+  
+app/controllers/projects_controller.rb:85:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:25:39 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  Rendered projects/multitasks.html.erb within layouts/application (31.1ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<ActionController::Parameters:0x000055571d41f978>):
+    16: <% end %>
+    17: <hr>
+    18: 
+    19: <%= nested_form_for @project,url: 'update' do |f| %>
+    20: 
+    21:   select Task date : 
+    22:   <% if @taskdate %>
+  
+app/views/projects/multitasks.html.erb:19:in `_app_views_projects_multitasks_html_erb__1070481815412500020_46916319858360'
+app/controllers/projects_controller.rb:85:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:28:27 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 1.4ms)
+
+
+  
+NameError (undefined local variable or method `project' for #<ProjectsController:0x00007ff3ee619e70>
+Did you mean?  project_url):
+  
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:28:46 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tib6KiHDp7a4M5fBvDDbljHi2Chw4MVIe3y9Vii2wwN05YbU0IJtTIXSKBmBFecnqfMgZEanLk6PPQPHWPm7pQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519925997073"=>{"project_id"=>"1", "title"=>"wuyd", "description"=>"tycv", "hours"=>"4", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (33.5ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (102.2ms)
+Completed 200 OK in 1040ms (Views: 925.2ms | ActiveRecord: 45.9ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:39:17 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (220.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 2046ms (ActiveRecord: 1589.1ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342825003060) expected, got "1519927741922" which is an instance of String(#46916298333720)):
+  
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:42:35 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 3.7ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342826528800) expected, got <ActionController::Parameters {"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"} permitted: false> which is an instance of ActionController::Parameters(#46916307767220)):
+  
+app/controllers/projects_controller.rb:84:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:49:10 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (64.6ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 1200ms (ActiveRecord: 404.9ms)
+
+
+  
+NoMethodError (undefined method `each_value' for #<ActionController::Parameters:0x00007ff3eda88ed0>
+Did you mean?  each_pair):
+  
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:49:51 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 1135ms (ActiveRecord: 4.1ms)
+
+
+  
+NameError (undefined local variable or method `vakue' for #<ProjectsController:0x00007ff3f0648020>
+Did you mean?  value):
+  
+app/controllers/projects_controller.rb:85:in `block in update'
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:50:13 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 5.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Task(#70342813670960) expected, got "1519927741922" which is an instance of String(#46916298333720)):
+  
+app/controllers/projects_controller.rb:85:in `block in update'
+app/controllers/projects_controller.rb:83:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:54:04 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 22.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/projects_controller.rb:86:in `block in update'
+app/controllers/projects_controller.rb:84:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:57:17 +0530
+  
+SyntaxError (/home/jeyasundharam/My Project/projecttasks/app/controllers/projects_controller.rb:93: syntax error, unexpected keyword_end
+        end
+        ^~~
+/home/jeyasundharam/My Project/projecttasks/app/controllers/projects_controller.rb:114: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/projects_controller.rb:93: syntax error, unexpected keyword_end
+app/controllers/projects_controller.rb:114: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:58:12 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 4.3ms)
+
+
+  
+NoMethodError (undefined method `count' for #<ActionController::Parameters:0x00007ff3ee6718f0>):
+  
+app/controllers/projects_controller.rb:84:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:58:38 +0530
+  
+SyntaxError (/home/jeyasundharam/My Project/projecttasks/app/controllers/projects_controller.rb:84: syntax error, unexpected '}', expecting =>
+        {@tasks.count}.times{@project.tasks_build}
+                     ^):
+  
+app/controllers/projects_controller.rb:84: syntax error, unexpected '}', expecting =>
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-01 23:59:35 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 22.9ms)
+
+
+  
+NoMethodError (undefined method `tasks_build' for #<Project:0x00007ff3ee274cc0>
+Did you mean?  task_ids):
+  
+app/controllers/projects_controller.rb:85:in `block in update'
+app/controllers/projects_controller.rb:85:in `times'
+app/controllers/projects_controller.rb:85:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:00:01 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 14.9ms)
+
+
+  
+NoMethodError (undefined method `built_tasks' for #<Project:0x00007ff3ee0e3708>):
+  
+app/controllers/projects_controller.rb:85:in `block in update'
+app/controllers/projects_controller.rb:85:in `times'
+app/controllers/projects_controller.rb:85:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:00:15 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 4.4ms)
+
+
+  
+NoMethodError (undefined method `built' for #<Project:0x00007ff3e5c8a1a0>):
+  
+app/controllers/projects_controller.rb:85:in `block in update'
+app/controllers/projects_controller.rb:85:in `times'
+app/controllers/projects_controller.rb:85:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:00:36 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 4.5ms)
+
+
+  
+NoMethodError (undefined method `built' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  build):
+  
+app/controllers/projects_controller.rb:85:in `block in update'
+app/controllers/projects_controller.rb:85:in `times'
+app/controllers/projects_controller.rb:85:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:00:49 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqCOmEI/i96sD5QZf9W+negnCqqCEX9DDlXUSoeGZ3np+CB7HC/Tql5KLiPh6OQeRDlaX5BFsfcW3n38eyLZZg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"1519927741922"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1519927747289"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (64.1ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (103.5ms)
+Completed 200 OK in 988ms (Views: 785.8ms | ActiveRecord: 69.7ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:01:03 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wz0z/YSBp28IknlYmU7m9sYcv3nczdn1zqjsTgfOeypz89oYNfN5g+D/INfd2kuGxLRUNYeJq9pteBNZsvTDCg==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"0"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"5", "_destroy"=>"false"}, "1"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"7", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 148ms (Views: 138.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:02:06 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mVYUX8zV91dEbzb5wcXlKs4zBFE/6P4h6Lkb4q4PJwNkFCYk+bh2/mDUEFydRMdIO85ZPWjN9xCLR17GOOBbZQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"0"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"0.5", "_destroy"=>"false"}, "1"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"0.5", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+Completed 500 Internal Server Error in 400ms (ActiveRecord: 1.8ms)
+
+
+  
+NameError (undefined local variable or method `taskdate' for #<ProjectsController:0x00007ff3ee1d6138>
+Did you mean?  @taskdate):
+  
+app/controllers/projects_controller.rb:101:in `block in update'
+app/controllers/projects_controller.rb:97:in `update'
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:02:43 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mVYUX8zV91dEbzb5wcXlKs4zBFE/6P4h6Lkb4q4PJwNkFCYk+bh2/mDUEFydRMdIO85ZPWjN9xCLR17GOOBbZQ==", "obj"=>{"taskdate"=>"2018-05-01"}, "project"=>{"tasks_attributes"=>{"0"=>{"project_id"=>"1", "title"=>"eli4s", "description"=>"yufg", "hours"=>"0.5", "_destroy"=>"false"}, "1"=>{"project_id"=>"1", "title"=>"ub", "description"=>"kujb", "hours"=>"0.5", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-05-01'[0m
+  [1m[35m (46.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects/showtasks
+Completed 302 Found in 215ms (ActiveRecord: 101.5ms)
+
+
+Started GET "/projects/showtasks" for 127.0.0.1 at 2018-03-02 00:02:44 +0530
+Processing by ProjectsController#showtasks as HTML
+  Rendering projects/showtasks.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[35m (153.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 2[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 3[0m
+  Rendered projects/showtasks.html.erb within layouts/application (250.8ms)
+Completed 200 OK in 406ms (Views: 205.5ms | ActiveRecord: 158.8ms)
+
+
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-02 00:02:53 +0530
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 588ms (Views: 584.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/showtasks" for 127.0.0.1 at 2018-03-02 00:02:57 +0530
+Processing by ProjectsController#showtasks as HTML
+  Rendering projects/showtasks.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 2[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 3[0m
+  Rendered projects/showtasks.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 214ms (Views: 166.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-02 00:03:08 +0530
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 138ms (Views: 135.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:03:21 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N+69Ial6JDZpJ6aGEC/4DjZhtriYN0xiaSlLpy5pIpcNLcHfWDvuzFTGGV4tCsS/rnBO9K5wp2SdaPU2XiZaMQ==", "obj"=>{"taskdate"=>"2018-03-14"}, "project"=>{"tasks_attributes"=>{"1519929193340"=>{"project_id"=>"1", "title"=>"hjb", "description"=>"kjb", "hours"=>"3", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-03-14'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 255ms (Views: 249.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:13:44 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AGlGf1MBGCOUJyAvKE/mCOdT52jHF0acGoQob4fvQ6DPYgBzSHPv/MbcwY5W2Mbo3mFzDNOp8X3UH7B0GRVBqg==", "obj"=>{"taskdate"=>"2018-03-15"}, "project"=>{"tasks_attributes"=>{"0"=>{"project_id"=>"1", "title"=>"hjb", "description"=>"kjb", "hours"=>"3", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (787.8ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-03-15'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (743.9ms)[0m  [1m[32mINSERT INTO `tasks` (`title`, `description`, `hours`, `taskdate`, `project_id`, `created_at`, `updated_at`) VALUES ('hjb', 'kjb', 3, '2018-03-15', 1, '2018-03-01 18:43:46', '2018-03-01 18:43:46')[0m
+  [1m[35m (841.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects/showtasks
+Completed 302 Found in 4316ms (ActiveRecord: 2373.5ms)
+
+
+Started GET "/projects/showtasks" for 127.0.0.1 at 2018-03-02 00:13:49 +0530
+Processing by ProjectsController#showtasks as HTML
+  Rendering projects/showtasks.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[35m (11.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT `tasks`.* FROM `tasks` WHERE `tasks`.`project_id` = 1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 2[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `tasks` WHERE `tasks`.`project_id` = 3[0m
+  Rendered projects/showtasks.html.erb within layouts/application (1042.5ms)
+Completed 200 OK in 4475ms (Views: 4362.0ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/projects/multitasks" for 127.0.0.1 at 2018-03-02 00:14:03 +0530
+Processing by ProjectsController#multitasks as HTML
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (76.1ms)
+Completed 200 OK in 759ms (Views: 582.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects/update" for 127.0.0.1 at 2018-03-02 00:14:21 +0530
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NycNPtdQzDVM52SF/TE2ruKdNh39Z36BNdeETJAmnH0N5HHAJhEGz3EG213AFAofeozOUcsglYfBljrd4Gnk2w==", "obj"=>{"taskdate"=>"2018-03-15"}, "project"=>{"tasks_attributes"=>{"1519929853872"=>{"project_id"=>"1", "title"=>"lksdn", "description"=>"zdkl", "hours"=>"6", "_destroy"=>"false"}}}, "commit"=>"Create"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`tasks`.`hours`) FROM `tasks` WHERE `tasks`.`taskdate` = '2018-03-15'[0m
+  Rendering projects/multitasks.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT `projects`.* FROM `projects`[0m
+  Rendered projects/multitasks.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 572ms (Views: 418.6ms | ActiveRecord: 2.6ms)
+
+

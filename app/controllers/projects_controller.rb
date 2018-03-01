@@ -62,31 +62,47 @@ class ProjectsController < ApplicationController
   end
   
   def update
-    taskdate=params[:obj][:taskdate]
+    @taskdate=params[:obj][:taskdate]
     @tasks=params[:project][:tasks_attributes]
     @errors=Array.new()
     sum=0;
+    k=0;
     @tasks.each do |i|
-      j = @tasks[i]
+      j = @tasks[i]     
       sum+=j["hours"].to_i
+       k+=1
     end
-    remaining=8-Task.where(:taskdate => taskdate).sum(:hours)
+    remaining=8-Task.where(:taskdate => @taskdate).sum(:hours)
     if sum > 8 || sum > remaining
        @errors<<"Task Not Updated"
        if sum > 8
         @errors<<"Total Hours should be not exceed 8 hours "
       end 
       if sum > remaining
-        @errors<<"Your Task date had only #{remaining} hours your tasks"
+        if remaining > 0
+          @errors<<"Your Task date #{@taskdate} had only #{remaining} hours"
+        else
+          @errors<<"Your Task date #{@taskdate} had no hours"
+        end
       end
-      @project=Project.new()
+     @project=Project.new()
+        k.times{@project.tasks.build}
+        k=0
+        @tasks.each do |i|
+          j = @tasks[i]   
+          @project.tasks[k].project_id=j["project_id"]
+          @project.tasks[k].title=j["title"]
+          @project.tasks[k].description=j["description"]
+          @project.tasks[k].hours=j["hours"]
+          k+=1
+        end
       render "multitasks"
     else
       @tasks.each do |i|
         j = @tasks[i]
         @task=Task.create(
           :project_id => j["project_id"],
-          :taskdate=>taskdate,
+          :taskdate=>@taskdate,
           :title=>j["title"],
           :description=>j["description"],
           :hours=>j["hours"]
