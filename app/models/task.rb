@@ -4,7 +4,6 @@ class Task < ApplicationRecord
   validates :taskdate, presence: true
   validates :hours,
             :inclusion => { :in => 0.0..8.0 ,:message => "Task Hours Not exceed 8 Hours"},
-             numericality: { only_integer: true },
             :presence => true
 end
 

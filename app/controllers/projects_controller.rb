@@ -80,7 +80,7 @@ class ProjectsController < ApplicationController
       end 
       if sum > remaining
         if remaining > 0
-          @errors<<"Your Task date #{@taskdate} had only #{remaining} hours"
+          @errors<<"Your Task date #{@taskdate} had only #{remaining} remaining hours"
         else
           @errors<<"Your Task date #{@taskdate} had no hours"
         end
