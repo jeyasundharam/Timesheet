@@ -1,32 +1,93 @@
+<head>
+<script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle(500);
+    });
+    $("#sproject").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".project").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    });
+   $("#stask").on("keyup", function() {
+    value = $(this).val().toLowerCase();
+    $(".task").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    });
+});
 
+
+</script>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width:1000px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<div id="flip">
 <h1> All Task Details</h1>
-<table border=1>
+</div>
+
+<div id="panel">
+<p>Type something in the input field to search the table by Project Title</p>  
+<%= text_field_tag 'sproject', nil, placeholder: 'Search By Project' %>
+<%= text_field_tag 'stask', nil, placeholder: 'Search by task' %>
+<br><br>
+
+<table>
 <tr>
 <th>Project</th>
 <th>Project description</th>
-<th>Task Title </th><th>Task Description </th>
-<th>Estimated Hours </th>
-<th>Task date</th>
-<th>Status</th>
+<th colspan=5>Task Informations</th>
 </tr>
-<tr>
+ <tbody id="myTable">
 <% @projects.each do |project| %>
 <% c=project.tasks.count %>
-    <td <% if c>0 %> rowspan=<%= c %> <% end %>> <%= project.title %></td>
-    <td <% if c>0 %> rowspan=<%= c %> <% end %>> <%= project.description %></td>
-    <% if c>0 
-       project.tasks.each do |i| %>
-        <td><%= i.title %></td><td><%= i.description %></td><td><%= i.hours %></td>
-        <td><%= i.taskdate %></td>
+    <tr class="project">
+    <td><%= project.title %></td>
+    <td><%= project.description %></td>
+    <td colspan=5 >      
+    <% if c>0 %>
+        <table>
+        <tr>
+        <th>Task Title </th>
+        <th>Task Description </th>
+        <th>Estimated Hours </th>
+        <th>Task date</th>
+        <th>Status</th>
+        </tr>
+         <% project.tasks.each do |i| %>
+        <tr class="task">
+        <td><%= i.title %></td>
+        <td><%= i.description %></td>
+        <td><%= i.hours %></td>
+        <td class="taskdate"><%= i.taskdate %></td>
         <td>
         <%= link_to "Task Finished",:controller => "tasks",:action=>"delete",:id=>i.id %> 
         </td>
         </tr>
-       <tr>
-    <% end %>
+      <% end %>
+      </table>
     <% else %>
-    <td colspan=5 >No other Tasks In this Project</td>
-    </tr>
+    No other Tasks In this Project
     <% end %>
+    </td>
+    </tr>
 <% end %>
+</tbody>
+</div>
 </table>

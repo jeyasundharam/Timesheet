@@ -1,9 +1,30 @@
 <script>
-function sumhours(values)
+$(document).ready(function(){
+  $("#checkform").on("click", function(event) {
+    var s=0;
+    $(".shours").each(function(){
+     s += parseFloat(this.value);
+    });
+    if (s>8)
+    {
+      $("#result").text("Total Hours not exceed 8 Hours");
+      event.preventDefault();
+    }
+    });
+});
+
+function sumhours(value)
+{	
+ if (value>8)
+ {
+
+  document.getElementById("result").innerHTML = " Total Task Hours  should be in the range inside 8 hours";
+ }
+}
+
+function allelements(form)
 {
-	
-  for (var i = 0, l = values.length, sum = 0; i < l; sum += values[i++]);
-  document.getElementById("result").innerHTML = sum;
+   document.getElementById("result").innerHTML = form.elements; 
 }
 </script>
 <h1> Multi Tasks With with  Multi Project</h1> 
@@ -26,7 +47,7 @@ function sumhours(values)
 <div id="result">
 
 </div>
-<%= nested_form_for @project,url: 'update' do |f| %>
+<%= nested_form_for @project,:id => "myform", url: 'update' do |f| %>
 
   select Task date : 
   <% if @taskdate %>
@@ -34,16 +55,17 @@ function sumhours(values)
   <% else %>
     <%= date_field(:obj, :taskdate) %>
   <% end %>
-  <%= f.fields_for :tasks do |task_form| %>
+  
+  <%= f.fields_for :tasks do |task_form|  %>
   <table border=1>
   <tr><td>Project title</td><td>
   <%= task_form.collection_select(:project_id, Project.all, :id, :title) %></td></tr>
   <tr><td>Title</td><td><%= task_form.text_field :title %></td></tr>
   <tr><td>Description</td><td><%= task_form.text_field :description %></td></tr>
-  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours, :onchange => "sumhours(this.id)"%></td></tr> 
+  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours, :class => "shours" %></td></tr> 
   <tr><td><%= task_form.link_to_remove "Remove this task" %></td></tr>
   </table>
   <% end %>
 <p><%= f.link_to_add "Add a task", :tasks %></p>
-<%= f.submit :Create %>
+<%= f.submit :Create,:id =>"checkform" %>
 <% end %>
