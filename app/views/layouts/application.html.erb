@@ -6,20 +6,58 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '485743785183352',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.12'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+</script>
+
   </head>
 
 
   <body>
    <center>
-   <h1>Project Shedule</h1>
-    <%= link_to "New",:controller => "projects",:action=>"insert" %>
-    <%= link_to "Show",:controller => "projects",:action=>"show" %>
-    <%= link_to "Multi tasks",:controller => "projects",:action=>"multitasks" %>
-    <%= link_to "Show All tasks",:controller => "projects",:action=>"showtasks" %>
+
+  <% if user_signed_in? %>
+  <%= link_to "New",:controller => "projects",:action=>"insert" %>
+  <%= link_to "Show",:controller => "projects",:action=>"show" %>
+  <%= link_to "Multi tasks",:controller => "projects",:action=>"multitasks" %>
+  <%= link_to "Show All tasks",:controller => "projects",:action=>"showtasks" %>
+  <%= link_to "Edit profile", edit_user_registration_path %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path  %> |
+  <%= link_to "Login", new_user_session_path  %>
+<% end %>
     <br>
-    <% if flash[:notice] %>
-      <%= flash[:notice] %>
-    <% end %>
+     <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
+  
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
   </body>
 </html>

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'home/index'
+
   get 'tasks/index'
 
   get 'tasks/insert'
+
 
   get 'tasks/show'
 
@@ -37,8 +40,15 @@ Rails.application.routes.draw do
       get :updateproject
     end
   end
-  
-  root 'projects#insert'
+
+devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+# ,controllers: { omniauth_callbacks: 'omniauth_callbacks' }
+#  authenticated :user do
+#      root 'home#index', as: 'authenticated_root'
+#    end
+
+  root to: "projects#insert"
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

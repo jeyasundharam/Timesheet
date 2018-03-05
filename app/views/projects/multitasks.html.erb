@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
     if (s>8)
     {
-      $("#result").text("Total Hours not exceed 8 Hours");
+      $("#result").text("Total task Hours not exceed 8 Hours");
       event.preventDefault();
     }
     });
@@ -19,13 +19,8 @@ function sumhours(value)
  if (value>8)
  {
 
-  document.getElementById("result").innerHTML = " Total Task Hours  should be in the range inside 8 hours";
+  document.getElementById("result").innerHTML = "Task Hours not exceed 8 Hours";
  }
-}
-
-function allelements(form)
-{
-   document.getElementById("result").innerHTML = form.elements; 
 }
 </script>
 </head>
@@ -49,7 +44,7 @@ function allelements(form)
 <div id="result">
 
 </div>
-<%= nested_form_for @project,:id => "myform", url: 'update' do |f| %>
+<%= nested_form_for @project,url: projects_update_url do |f| %>
 
   select Task date : 
   <% if @taskdate %>
@@ -64,7 +59,7 @@ function allelements(form)
   <%= task_form.collection_select(:project_id, Project.all, :id, :title) %></td></tr>
   <tr><td>Title</td><td><%= task_form.text_field :title %></td></tr>
   <tr><td>Description</td><td><%= task_form.text_field :description %></td></tr>
-  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours, :class => "shours" %></td></tr> 
+  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours,:onchange => "sumhours(this.value)", :class => "shours" %></td></tr> 
   <tr><td><%= task_form.link_to_remove "Remove this task" %></td></tr>
   </table>
   <% end %>

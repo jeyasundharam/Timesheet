@@ -24,7 +24,7 @@ $(document).ready(function(){
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width:1000px;
+    width:100%;
 }
 
 td, th {
@@ -40,10 +40,10 @@ tr:nth-child(even) {
 </head>
 <div id="flip">
 <h1> All Task Details</h1>
+<h3>Click me to show Details</h3>
 </div>
-
 <div id="panel">
-<p>Type something in the input field to search the table by Project Title</p>  
+<p>Type something in the input field to search the table by Project Title</p> 
 <%= text_field_tag 'sproject', nil, placeholder: 'Search By Project' %>
 <%= text_field_tag 'stask', nil, placeholder: 'Search by task' %>
 <br><br>

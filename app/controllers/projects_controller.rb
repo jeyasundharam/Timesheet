@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   
+  before_action :authenticate_user!
   def index
   end
 
@@ -62,6 +63,7 @@ class ProjectsController < ApplicationController
   end
   
   def update
+    
     @taskdate=params[:obj][:taskdate]
     @tasks=params[:project][:tasks_attributes]
     @errors=Array.new()

@@ -8,6 +8,15 @@ end
 gem 'nested_form'
 gem "jquery-rails"
 gem 'bootstrap-sass'
+# User Authentication
+gem 'devise'
+
+# User Authentication with Facebook
+gem 'omniauth-facebook'
+
+# Development ENV Variables
+gem 'figaro'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use mysql as the database for Active Record
