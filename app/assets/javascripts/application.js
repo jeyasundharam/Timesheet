@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_nested_form
-//= require bootstrap-sprockets
+//= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .

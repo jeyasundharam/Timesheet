@@ -1,0 +1,84 @@
+{:uriI"µfile:///home/jeyasundharam/My%20Project/projecttasks/app/assets/bootstrap-sass/package.json?type=application/json&id=014b048072e551ea22abaadceb34706f21a7ce3e496bc419cb7976d424bf65b1:ET:load_pathI"app/assets/bootstrap-sass;T:filenameI"+app/assets/bootstrap-sass/package.json;T:	nameI"package;T:logical_pathI"package.json;T:content_typeI"application/json;T:sourceI"{{
+  "_from": "bootstrap-sass",
+  "_id": "bootstrap-sass@3.3.7",
+  "_inBundle": false,
+  "_integrity": "sha1-ZZbHq0D2Y3OTMjqwvIDQZPxjBJg=",
+  "_location": "/bootstrap-sass",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "bootstrap-sass",
+    "name": "bootstrap-sass",
+    "escapedName": "bootstrap-sass",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-sass/-/bootstrap-sass-3.3.7.tgz",
+  "_shasum": "6596c7ab40f6637393323ab0bc80d064fc630498",
+  "_spec": "bootstrap-sass",
+  "_where": "/home/jeyasundharam/My Project/projecttasks",
+  "bugs": {
+    "url": "https://github.com/twbs/bootstrap-sass/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Thomas McDonald"
+    },
+    {
+      "name": "Tristan Harward"
+    },
+    {
+      "name": "Peter Gumeson"
+    },
+    {
+      "name": "Gleb Mazovetskiy"
+    }
+  ],
+  "deprecated": false,
+  "description": "bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications.",
+  "devDependencies": {
+    "ejs": "~2.4.2",
+    "mincer": "~1.4.0",
+    "node-sass": "^3.8.0"
+  },
+  "eyeglass": {
+    "exports": "eyeglass-exports.js",
+    "needs": "^0.7.1"
+  },
+  "files": [
+    "assets",
+    "eyeglass-exports.js",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/twbs/bootstrap-sass#readme",
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "css",
+    "eyeglass-module"
+  ],
+  "license": "MIT",
+  "main": "assets/javascripts/bootstrap.js",
+  "name": "bootstrap-sass",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twbs/bootstrap-sass.git"
+  },
+  "sass": "assets/stylesheets/_bootstrap.scss",
+  "style": "assets/stylesheets/_bootstrap.scss",
+  "version": "3.3.7"
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"gfile-digest:///home/jeyasundharam/My%20Project/projecttasks/app/assets/bootstrap-sass/package.json;TTF:charsetI"
+utf-8;F:digest"%.ñä¦éÍ®Õ+sXÖø¸*#ZÔutòÃw†O:lengthi{:dependencies_digest"%¡írpc¤Ú§{¯"ß1À'¸Nb=ëx6«©ÕîG»Y‘µ:idI"E014b048072e551ea22abaadceb34706f21a7ce3e496bc419cb7976d424bf65b1;F:
+mtimel+Þ]–Z
