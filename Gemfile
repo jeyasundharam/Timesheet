@@ -13,6 +13,8 @@ gem 'devise'
 
 # User Authentication with Facebook
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
 
 # Development ENV Variables
 gem 'figaro'

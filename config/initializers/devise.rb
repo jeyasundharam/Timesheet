@@ -288,5 +288,16 @@ Devise.setup do |config|
                     site: 'https://graph.facebook.com/v2.11',
                     authorize_url: "https://www.facebook.com/v2.11/dialog/oauth"
                 }
+   config.omniauth :google_oauth2, "790957556147-g9eh10673tj30b3ovej50bvh03oe8s1k.apps.googleusercontent.com",
+                   "PJNSEL-H1weqJsJAaeo69y9v", { name: "google" }
 
+
+ # config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'],
+ #    {
+ #      name: 'google',
+ #      scope: 'email, profile, plus.me, http://gdata.youtube.com',
+ #      prompt: 'select_account',
+ #      image_aspect_ratio: 'square',
+ #      image_size: 50
+ #    }
 end
