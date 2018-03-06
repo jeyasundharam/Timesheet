@@ -11,7 +11,6 @@ class User < ApplicationRecord
     user.password = Devise.friendly_token[0,20]
      puts "Email = #{user.email}"
      puts "Name = #{auth.info.name}"
-     puts "UserName = #{auth.info.username}"
      puts auth
   
   	end

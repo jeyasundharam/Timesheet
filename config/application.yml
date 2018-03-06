@@ -10,5 +10,12 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 development:
+  #Time sheet
   FACEBOOK_APP_ID: "485743785183352"
   FACEBOOK_APP_SECRET: "472e034d652d74395888aee8fd9d7c89"
+
+  # Project Tasks
+  # FACEBOOK_APP_ID: " 1441600085969362"
+  # FACEBOOK_APP_SECRET: "61ff5c7a6058b89481212662dd938d8c"
+
+  

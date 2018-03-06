@@ -30310,3 +30310,754 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 105ms (Views: 104.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:26:14 +0530
+  [1m[35m (381.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (122.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 99ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:26:19 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (194.5ms)
+Completed 200 OK in 2983ms (Views: 2444.5ms | ActiveRecord: 491.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:26:38 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:26:39 +0530
+Started GET "/users/auth/facebook/callback?code=AQA2N6ITUWK1bBOubwhYby-sw3nnbpYaMxHDaGM0Cn9BbPnB62Y6DjeWleD_B7KcoZQYuICjcqvxCTzj4OjjWl3BIoSGPFCnmIDaOD35OOV5e5GuDJnB387fbMf3eo65NJLHz7vQiYM3ofa9aH2wf_bJxrrl7twEgKCcmtm4URAUAD6b5bw7UZmwrqX-ZFPYlx3Mdx0GfKgsKeFFG4wR2r5sqUr0YsdI2WXuTNn6d4qVNZMudwQ6CmFeYJTXoskvqpEyQd87ElgZOrECRtqdQeccnQapJaQwR8SRv3jnvpJiiBDwj-HOawsX433Eu4JjRK9P8DphkfuY3O9BJ-b88Phf&state=3648479e3f959aa8c987986291318a7d355dcf2fa7a2f07f" for 127.0.0.1 at 2018-03-06 10:26:39 +0530
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"AQA2N6ITUWK1bBOubwhYby-sw3nnbpYaMxHDaGM0Cn9BbPnB62Y6DjeWleD_B7KcoZQYuICjcqvxCTzj4OjjWl3BIoSGPFCnmIDaOD35OOV5e5GuDJnB387fbMf3eo65NJLHz7vQiYM3ofa9aH2wf_bJxrrl7twEgKCcmtm4URAUAD6b5bw7UZmwrqX-ZFPYlx3Mdx0GfKgsKeFFG4wR2r5sqUr0YsdI2WXuTNn6d4qVNZMudwQ6CmFeYJTXoskvqpEyQd87ElgZOrECRtqdQeccnQapJaQwR8SRv3jnvpJiiBDwj-HOawsX433Eu4JjRK9P8DphkfuY3O9BJ-b88Phf", "state"=>"3648479e3f959aa8c987986291318a7d355dcf2fa7a2f07f"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:26:40 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:26:40 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 195ms (Views: 193.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:27:15 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:27:16 +0530
+Started GET "/users/auth/facebook/callback?code=AQCmcdvSgALl6lQPeOOAqKkuP2Y2MqlvA3WvdykWo9Sq8fkjIsQHx1_Xpt3M0CSg5CxHpissdgsL6kl-IxQEs2RdVodLDe7-0Hy5vt9RW5hyfxkYsj_iWsxdLpj1dPmimH5qGM4_AO20VjsdKr8TnCBd82wHLvxaOo2c6dibvnd9kXfNb6RK-1q3YW7ZfyLrx375s7r6pCiRf4reyKmZ1-w0bQA-6C2u_lxtJlN9IBTr5C0H5Wxv8nX_xH8QxaTtSuqCGeh2qs8KfUjlBLYEmcwMG39fxxwTl6DpYWmqKzTVHQzLyFi0od3QPtcclr1YDvLweBbWU13cU-tzLpMOXBXa&state=a7b598c33972cd9c2d54940597bf62a9f3be08c84f599470" for 127.0.0.1 at 2018-03-06 10:27:16 +0530
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"AQCmcdvSgALl6lQPeOOAqKkuP2Y2MqlvA3WvdykWo9Sq8fkjIsQHx1_Xpt3M0CSg5CxHpissdgsL6kl-IxQEs2RdVodLDe7-0Hy5vt9RW5hyfxkYsj_iWsxdLpj1dPmimH5qGM4_AO20VjsdKr8TnCBd82wHLvxaOo2c6dibvnd9kXfNb6RK-1q3YW7ZfyLrx375s7r6pCiRf4reyKmZ1-w0bQA-6C2u_lxtJlN9IBTr5C0H5Wxv8nX_xH8QxaTtSuqCGeh2qs8KfUjlBLYEmcwMG39fxxwTl6DpYWmqKzTVHQzLyFi0od3QPtcclr1YDvLweBbWU13cU-tzLpMOXBXa", "state"=>"a7b598c33972cd9c2d54940597bf62a9f3be08c84f599470"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:27:17 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:27:17 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 151ms (Views: 148.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:27:41 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:27:41 +0530
+Started GET "/users/auth/facebook/callback?code=AQC5f_Xo0sNSITuFZh7ihKlM44H8rrADJGVVO7pnUoysZ56RLZQmb_JknUgovoO5xsDEywH6EDdN9wVmu-_p7jh54AMiwCDPETRmCJF6837exZrFF-V_dXbmLWg-rUBu_CVRHvxoqw_MN4FxBF7q3WYduApVdJ4gaFz9r3iUnRuLMglskYmhsJUteO9FW_0sjhqm_X4X-1v133WuYnmagfjQQMuZH68Pxnxvn3RQrOCKInkkdYYSKaH8YewjV-MU5il5epUwLq3FSEBsfrYAXR3RgV8hi9iTbCC3-sn58feMnX0gu8ODmTDzlg4naavsxla1LTxU-MyCNILgz90zzjk3&state=ca0071f76920a7be76020c301685037af160364049531aaf" for 127.0.0.1 at 2018-03-06 10:27:41 +0530
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"AQC5f_Xo0sNSITuFZh7ihKlM44H8rrADJGVVO7pnUoysZ56RLZQmb_JknUgovoO5xsDEywH6EDdN9wVmu-_p7jh54AMiwCDPETRmCJF6837exZrFF-V_dXbmLWg-rUBu_CVRHvxoqw_MN4FxBF7q3WYduApVdJ4gaFz9r3iUnRuLMglskYmhsJUteO9FW_0sjhqm_X4X-1v133WuYnmagfjQQMuZH68Pxnxvn3RQrOCKInkkdYYSKaH8YewjV-MU5il5epUwLq3FSEBsfrYAXR3RgV8hi9iTbCC3-sn58feMnX0gu8ODmTDzlg4naavsxla1LTxU-MyCNILgz90zzjk3", "state"=>"ca0071f76920a7be76020c301685037af160364049531aaf"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:27:42 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:27:42 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:28:16 +0530
+  [1m[35m (33.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:28:16 +0530
+Started GET "/users/auth/facebook/callback?code=AQCQiw99o6EAOzvjAIe9-u4CEOX6oGxmViGNjm5qd2CS20Bwn_b52UprZV4UAB99eAlzRh9If1mXEf5aQ6aQ4hJaBfqNdXN00oNzEDQQGRMUPMowVq9cyXdAGKEG-oIHp_QINsCga6CA9WJOEsLx3ZHjUcSxAoHLp9uwb8tvW3Wm6d8YFASt7JsuZ461u1QmqKX7-Wiomx1sLVBv5aVHYTrsa2QFzrTVSETKGVFYVezLGO-Fc-yxMIPUD2z-415BXlEztGQTfB9eX-thbhqVe4oYyY3JpM8Oa3oV13ap-FP709iEhpFgWHwiWsYnkLSaI3xXlI6-29W7T0KY5YuY5rGF&state=3fa1d07833031e3b908e727bbedde9de4bc05fe01b07bbb9" for 127.0.0.1 at 2018-03-06 10:28:16 +0530
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"AQCQiw99o6EAOzvjAIe9-u4CEOX6oGxmViGNjm5qd2CS20Bwn_b52UprZV4UAB99eAlzRh9If1mXEf5aQ6aQ4hJaBfqNdXN00oNzEDQQGRMUPMowVq9cyXdAGKEG-oIHp_QINsCga6CA9WJOEsLx3ZHjUcSxAoHLp9uwb8tvW3Wm6d8YFASt7JsuZ461u1QmqKX7-Wiomx1sLVBv5aVHYTrsa2QFzrTVSETKGVFYVezLGO-Fc-yxMIPUD2z-415BXlEztGQTfB9eX-thbhqVe4oYyY3JpM8Oa3oV13ap-FP709iEhpFgWHwiWsYnkLSaI3xXlI6-29W7T0KY5YuY5rGF", "state"=>"3fa1d07833031e3b908e727bbedde9de4bc05fe01b07bbb9"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:28:17 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:28:17 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 504ms (Views: 453.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:28:54 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:28:55 +0530
+Started GET "/users/auth/facebook/callback?code=AQCuyB1dgYIXQzpY-WtoHTfHUpx3DRQOMQPo1byxnjZYBBkPQgsxnEXt4FyAeOy2k7g_xjgn_4RGpFlD9AFdAvxysYmhux2hfJq2cJsPO_O9XhaJ4w1LIsouKSpFhBS7d5fBs2seJDiLhe6JNr6fXhTt3x4zhfj94TRe1wAk9_f-n-marwPevuK-ijqITMSfOV-5EWc3hYyfq_RORz1WuHq0nj4SawK2oyLMw-6l2vaL13YP4oBB-AZKvtzh3xD_wQBXS76A8DHmSIABdM5GgH6175I6InT60y88_tcbFSBtCHfzuh9SUbJWyMvfq-TVt9oP2QNNUv2IFjy4xQUO9LV_&state=ff9908c8bc289cbebb5106b0cb1b0bcd2636983fbc25e61e" for 127.0.0.1 at 2018-03-06 10:28:55 +0530
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"code"=>"AQCuyB1dgYIXQzpY-WtoHTfHUpx3DRQOMQPo1byxnjZYBBkPQgsxnEXt4FyAeOy2k7g_xjgn_4RGpFlD9AFdAvxysYmhux2hfJq2cJsPO_O9XhaJ4w1LIsouKSpFhBS7d5fBs2seJDiLhe6JNr6fXhTt3x4zhfj94TRe1wAk9_f-n-marwPevuK-ijqITMSfOV-5EWc3hYyfq_RORz1WuHq0nj4SawK2oyLMw-6l2vaL13YP4oBB-AZKvtzh3xD_wQBXS76A8DHmSIABdM5GgH6175I6InT60y88_tcbFSBtCHfzuh9SUbJWyMvfq-TVt9oP2QNNUv2IFjy4xQUO9LV_", "state"=>"ff9908c8bc289cbebb5106b0cb1b0bcd2636983fbc25e61e"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:28:56 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:28:56 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 158ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:29:15 +0530
+  [1m[35m (19.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:29:15 +0530
+Started GET "/users/auth/facebook/callback?code=AQCnfGP0PtcrgnXAXs5Dvvv0AZBNrpKguE5c-JTIjdsf1cD2TYsE4T9xiHXj34ZRSBguMLshXLQwQp1G0OSCvtq0uFzFhQTho5M1mmNSW0k4gB9ZdYYtNLD8xaO5x_SleE_0MtCfOc5mpW0oDYjf41m66ynm0SgAvn5xles8oTriHQ0RJCJYET0kjPWHuY7StPWD5zp5lOPjO5yIXaBcgKPNQHAkZ_9bhDXpcbVjHwmaUbUDMAmKG8W73leXzhRA4EW16M3B1uH9ATLekvWJ1jx2J5YYXIEkobW3gg9x5Fx5_5hWFfgTTHheUrvnptGEadFeDH1BYeLrMtVy6YrEePwQ&state=72ffa7b1e401b4eb234cd9fbd482c4cd367fcb961b9e6ce9" for 127.0.0.1 at 2018-03-06 10:29:15 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCnfGP0PtcrgnXAXs5Dvvv0AZBNrpKguE5c-JTIjdsf1cD2TYsE4T9xiHXj34ZRSBguMLshXLQwQp1G0OSCvtq0uFzFhQTho5M1mmNSW0k4gB9ZdYYtNLD8xaO5x_SleE_0MtCfOc5mpW0oDYjf41m66ynm0SgAvn5xles8oTriHQ0RJCJYET0kjPWHuY7StPWD5zp5lOPjO5yIXaBcgKPNQHAkZ_9bhDXpcbVjHwmaUbUDMAmKG8W73leXzhRA4EW16M3B1uH9ATLekvWJ1jx2J5YYXIEkobW3gg9x5Fx5_5hWFfgTTHheUrvnptGEadFeDH1BYeLrMtVy6YrEePwQ", "state"=>"72ffa7b1e401b4eb234cd9fbd482c4cd367fcb961b9e6ce9"}
+  [1m[36mUser Load (23.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (18.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (60.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 484ms (ActiveRecord: 119.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-06 10:29:17 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 505ms (Views: 500.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:49:18 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:49:18 +0530
+Started GET "/users/auth/facebook/callback?code=AQDnteoXbX1rLULAenDEVaRk_DUs0oswAL6YsAtjBsOOsQ6c3K3aH5qmM6OZWgyY1_HN7Oohsh4RalcFSWU9Of4wyQbj_Bb438yeh9NhuieDASSRLyZ71X7JzqyaC3zH6kvKP7-34IMTZMByk_k5VBopgV6kc9WuGcPo2wENAN-pZu8IQezwaAX_N0_PsZWjcW9rzSVfk7prPQE2ESanrGLTgEooXQAWn6uUyXcZqhAkAv9KTDFsLzB2BA_cG8jbKBdPrpTgUL1ApwiLgh-OlWYGVLt8gXyGeTXLdTGlL3cs1nns4CSuAZytQxoHr3ASmFdU-YFI38C9vw2bDDGkouLi&state=8699fdd479662817a663748dc9033a7130e9854eb5f55554" for 127.0.0.1 at 2018-03-06 10:49:19 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDnteoXbX1rLULAenDEVaRk_DUs0oswAL6YsAtjBsOOsQ6c3K3aH5qmM6OZWgyY1_HN7Oohsh4RalcFSWU9Of4wyQbj_Bb438yeh9NhuieDASSRLyZ71X7JzqyaC3zH6kvKP7-34IMTZMByk_k5VBopgV6kc9WuGcPo2wENAN-pZu8IQezwaAX_N0_PsZWjcW9rzSVfk7prPQE2ESanrGLTgEooXQAWn6uUyXcZqhAkAv9KTDFsLzB2BA_cG8jbKBdPrpTgUL1ApwiLgh-OlWYGVLt8gXyGeTXLdTGlL3cs1nns4CSuAZytQxoHr3ASmFdU-YFI38C9vw2bDDGkouLi", "state"=>"8699fdd479662817a663748dc9033a7130e9854eb5f55554"}
+  [1m[36mUser Load (302.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (32.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35m (12.9ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 755ms (ActiveRecord: 348.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-06 10:49:20 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (203.9ms)
+Completed 200 OK in 1120ms (Views: 1118.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-06 10:49:44 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y6KvN8t7Yx84jrsUcGcAvJXwOY19WyGnPJy3trvyDp6jJZxnF5FbBq3q2srL6C5yDmF595B+PoZM1js1PW+x3Q==", "user"=>{"email"=>"jeyasundharam33@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 382ms (Views: 108.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:54:19 +0530
+  [1m[35m (45.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (28.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 42ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:54:19 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 1539ms (Views: 1488.5ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:54:37 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:54:37 +0530
+Started GET "/users/auth/facebook/callback?code=AQD-NYkmBJ556YzlxkXdj4LFclEertiUwQu3o4XYpQflH_M4v1PSDxOk6_0Mk_SwuqGBCJEbGTgZCv-9jHhTsC9eaLKpHymIrz6lUGkg0S-WLyeF-JnED0aMbO6MSysZMzq-Bn4t9b7j5qxal0HHOAOqJD37OsnZaClGe1GUrF2ZEVj58s-HSNZn88u5Z-gOzr182-TSbsVRK5A3m1zlyUqDZd-SdYA25I40M7Qj9835R_F0O3gKRP1tRkPMkMCO8XZHM7EcQ3f95p79iTU_wZnCso26NEseNRtvst_1B5CTkC-yWD24J-D0arAXHnd2km3-v4s2j9QZHoKOfAW5KQju&state=ef008d3ffbc9b37b60fb64fd9f06dad6de5069acaae7319b" for 127.0.0.1 at 2018-03-06 10:54:38 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQD-NYkmBJ556YzlxkXdj4LFclEertiUwQu3o4XYpQflH_M4v1PSDxOk6_0Mk_SwuqGBCJEbGTgZCv-9jHhTsC9eaLKpHymIrz6lUGkg0S-WLyeF-JnED0aMbO6MSysZMzq-Bn4t9b7j5qxal0HHOAOqJD37OsnZaClGe1GUrF2ZEVj58s-HSNZn88u5Z-gOzr182-TSbsVRK5A3m1zlyUqDZd-SdYA25I40M7Qj9835R_F0O3gKRP1tRkPMkMCO8XZHM7EcQ3f95p79iTU_wZnCso26NEseNRtvst_1B5CTkC-yWD24J-D0arAXHnd2km3-v4s2j9QZHoKOfAW5KQju", "state"=>"ef008d3ffbc9b37b60fb64fd9f06dad6de5069acaae7319b"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (40.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `provider`, `uid`) VALUES ('jeyasundharam33@gmail.com', '$2a$11$uSMMBHh6oYuBcbQw37.EY.0FATJ6UScDX6AxVSgvYcZPAkGw/kNkS', '2018-03-06 05:24:39', '2018-03-06 05:24:39', 'facebook', '786938158170422')[0m
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (42.4ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2018-03-06 05:24:39', `last_sign_in_at` = '2018-03-06 05:24:39', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 1[0m
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 401 Unauthorized in 617ms (ActiveRecord: 140.3ms)
+
+
+  
+NoMethodError (undefined method `set_flash_message' for #<Users::OmniauthCallbacksController:0x00007f3b5d469fc0>):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:8:in `facebook'
+Started GET "/" for 127.0.0.1 at 2018-03-06 10:56:12 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 10:56:12 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 215ms (Views: 213.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:56:17 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 10:56:17 +0530
+Started GET "/users/auth/facebook/callback?code=AQCvbSeTubxbzTPAd_4rGEqfHmkpNKfCUBSsUaAa3JLIFZQAutimmbauX_91Vt8hNXyxL2YdA9rXNbZ_xhyFtGJ8ys_RbHPUon0RdZSUvrnJ1jLPQw0Upk8rANR-jftY5C5qsCu3gygdElhx46TQxWUFCDdvJn1mXEUkVH6aDmGFF_GmY9nyG_RcqitCtmrAppVKr4Swosbs59GikMsjEvLGSSUlVWY2Rur9XKM551QDRYyjGVwdrFXhvLy1__kmJ-Tya-ga-MWfz7NIxmy98UFGEERscAu6-18bXQ9gXyHt70PXxORmXM2IzN3BW4kiFA18SuHRiu6EiDn221lcVgjX&state=3525ee257af7d262cec912c0101e20fab05d97b6282d2f10" for 127.0.0.1 at 2018-03-06 10:56:18 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCvbSeTubxbzTPAd_4rGEqfHmkpNKfCUBSsUaAa3JLIFZQAutimmbauX_91Vt8hNXyxL2YdA9rXNbZ_xhyFtGJ8ys_RbHPUon0RdZSUvrnJ1jLPQw0Upk8rANR-jftY5C5qsCu3gygdElhx46TQxWUFCDdvJn1mXEUkVH6aDmGFF_GmY9nyG_RcqitCtmrAppVKr4Swosbs59GikMsjEvLGSSUlVWY2Rur9XKM551QDRYyjGVwdrFXhvLy1__kmJ-Tya-ga-MWfz7NIxmy98UFGEERscAu6-18bXQ9gXyHt70PXxORmXM2IzN3BW4kiFA18SuHRiu6EiDn221lcVgjX", "state"=>"3525ee257af7d262cec912c0101e20fab05d97b6282d2f10"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-06 05:26:18', `sign_in_count` = 2, `updated_at` = '2018-03-06 05:26:18' WHERE `users`.`id` = 1[0m
+  [1m[35m (233.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 401 Unauthorized in 473ms (ActiveRecord: 249.0ms)
+
+
+  
+NoMethodError (undefined method `set_flash_message' for #<Users::OmniauthCallbacksController:0x00007f3b5e096730>):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:8:in `facebook'
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:00:17 +0530
+  [1m[35m (44.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 45ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 11:00:18 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 645ms (Views: 567.7ms | ActiveRecord: 43.3ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:00:27 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:00:27 +0530
+Started GET "/users/auth/facebook/callback?code=AQDikvtBviOVJFlVpomfIaSiHloic1CEcLZSx7nFosX3ctsUUi17rDOKAadKHt-BEuH9wcez5ub6GuAWO4cH02AC7FGj-54e5CSfy5DrtzTYAYuIQrxr328_mr-wiawUQxbosnO6Tf1b9ki7i7zYL68vuHvmeyewklEN6jbtnxrdPss3RzXMyokKUOPXtcUG7uX7pv9jVGIZ4Ts7-dbnovgu_qpwT527Mtj-Kh6TAofGq-oCQw2F7te2Cwwu08u96QV7TOP-ToaXZqgHnaSNkSJtytjQC_0H4doHA0F2I5jqhu5QAP6fu0waHZtSXKQxVXTFfQU8QC5Xj1iAy-ADYYZG&state=c5df6a8e6ddad0be31635da70fe414003a9d62642939eebd" for 127.0.0.1 at 2018-03-06 11:00:28 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDikvtBviOVJFlVpomfIaSiHloic1CEcLZSx7nFosX3ctsUUi17rDOKAadKHt-BEuH9wcez5ub6GuAWO4cH02AC7FGj-54e5CSfy5DrtzTYAYuIQrxr328_mr-wiawUQxbosnO6Tf1b9ki7i7zYL68vuHvmeyewklEN6jbtnxrdPss3RzXMyokKUOPXtcUG7uX7pv9jVGIZ4Ts7-dbnovgu_qpwT527Mtj-Kh6TAofGq-oCQw2F7te2Cwwu08u96QV7TOP-ToaXZqgHnaSNkSJtytjQC_0H4doHA0F2I5jqhu5QAP6fu0waHZtSXKQxVXTFfQU8QC5Xj1iAy-ADYYZG", "state"=>"c5df6a8e6ddad0be31635da70fe414003a9d62642939eebd"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (16.8ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `provider`, `uid`) VALUES ('jeyasundharam33@gmail.com', '$2a$11$LeZg4xuQ5OR8XtXOxjyMK.ERHq4cN3/glWE3aFLNq1McgjG.YVsaC', '2018-03-06 05:30:29', '2018-03-06 05:30:29', 'facebook', '786938158170422')[0m
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2018-03-06 05:30:29', `last_sign_in_at` = '2018-03-06 05:30:29', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 1[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 382ms (ActiveRecord: 92.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:00:29 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 282ms (Views: 169.0ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-06 11:00:53 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"H0t/pHKJyaXCUzV6zTgy/oiCp9H0pO2QSgxqdcEJG9V2WP+4PfJHQXUZR5jGdadNBCWQFL426U7yxaOaZNUp5A=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:00:53 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 11:00:53 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 106ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:00:57 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:00:57 +0530
+Started GET "/users/auth/facebook/callback?code=AQAWILCxmpRYSTRIkNikMVLouR89HW_LrTFOWc_vaB7skEhBmcaGJkxvIr1NB9wqHEIBI3Jkp5KoUbzHfhIRX_thvJsj4CltuSr-pjJAG-Imaad9V8awrGmWNnmvWj4H3b8Jfm9SdkYJ4qsqKL_ecDtFbwz5jTmsIDecCRIqHw-vJ4rmxY7KOXggkyRFKhSjkIyoL5--S1ZryHocQs5ataEIc005jd1x6Cz3EdKX6yk34rhjqSEGcfFvGRJZyzkFVRSyyfUnQ5665w1GJULJMMNdpJ83Jg3Er7uoUsur36acx9DBGoQULsG_rcUA5Qn8DrxdMQObLFNBvzMyU_R5-Dg6&state=fc8bcbaa3f486c42e2a1db67bc39824463c4f3b7b09c2e49" for 127.0.0.1 at 2018-03-06 11:00:57 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAWILCxmpRYSTRIkNikMVLouR89HW_LrTFOWc_vaB7skEhBmcaGJkxvIr1NB9wqHEIBI3Jkp5KoUbzHfhIRX_thvJsj4CltuSr-pjJAG-Imaad9V8awrGmWNnmvWj4H3b8Jfm9SdkYJ4qsqKL_ecDtFbwz5jTmsIDecCRIqHw-vJ4rmxY7KOXggkyRFKhSjkIyoL5--S1ZryHocQs5ataEIc005jd1x6Cz3EdKX6yk34rhjqSEGcfFvGRJZyzkFVRSyyfUnQ5665w1GJULJMMNdpJ83Jg3Er7uoUsur36acx9DBGoQULsG_rcUA5Qn8DrxdMQObLFNBvzMyU_R5-Dg6", "state"=>"fc8bcbaa3f486c42e2a1db67bc39824463c4f3b7b09c2e49"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (47.7ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-06 05:30:58', `sign_in_count` = 2, `updated_at` = '2018-03-06 05:30:58' WHERE `users`.`id` = 1[0m
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 84ms (ActiveRecord: 76.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:00:58 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 105ms (Views: 100.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:13:56 +0530
+  [1m[35m (865.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (15.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 42ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 11:14:00 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 1993ms (Views: 1777.4ms | ActiveRecord: 128.4ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:14:21 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:14:21 +0530
+Started GET "/users/auth/facebook/callback?code=AQAxFrf-xrgcqTixEsn0Eonqtypzu2oUR6SrmGr6iux3SQHJ6jnIfdGMYptWszE3RQ3XOdp8CoZn8AEnJcqQO97qaXOod2ovqlYIbPMI7tajmxTksvbIgJ2khQXblqU6p-mmdeVSQsTqyejnGuhwfGxJru2wbzQtlUij3BD_4a8Ezv_1_piEmnmVnfYCmzvdppLCoZT4zWwJMZcPFheuo9m4WvUrBTN44bt1lqoS8MVEbRBPQoCJ91TKWjAFNO5m4NBL2FjxLbVCZenqpz6AeR8pjAnr1wNNpeh9-ZvKK_00UyGx1s0phqWeBTgLE0cUCmSg7gK_8RiQqkjyD6_pqz2i&state=e63b0ae09bcd58abac9ceb2cce4a7bbe82af37263a8091f0" for 127.0.0.1 at 2018-03-06 11:14:21 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAxFrf-xrgcqTixEsn0Eonqtypzu2oUR6SrmGr6iux3SQHJ6jnIfdGMYptWszE3RQ3XOdp8CoZn8AEnJcqQO97qaXOod2ovqlYIbPMI7tajmxTksvbIgJ2khQXblqU6p-mmdeVSQsTqyejnGuhwfGxJru2wbzQtlUij3BD_4a8Ezv_1_piEmnmVnfYCmzvdppLCoZT4zWwJMZcPFheuo9m4WvUrBTN44bt1lqoS8MVEbRBPQoCJ91TKWjAFNO5m4NBL2FjxLbVCZenqpz6AeR8pjAnr1wNNpeh9-ZvKK_00UyGx1s0phqWeBTgLE0cUCmSg7gK_8RiQqkjyD6_pqz2i", "state"=>"e63b0ae09bcd58abac9ceb2cce4a7bbe82af37263a8091f0"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (12.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (114.2ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-06 05:44:23', `last_sign_in_at` = '2018-03-06 05:30:58', `sign_in_count` = 3, `updated_at` = '2018-03-06 05:44:23' WHERE `users`.`id` = 1[0m
+  [1m[35m (134.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 301ms (ActiveRecord: 262.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:14:23 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 340ms (Views: 156.7ms | ActiveRecord: 82.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-06 11:15:25 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5IGA/Hug7uIUEs0XxTikyH9kJg2d/3G4cq8MI19AwvuEgdGdW8db1zkdtPdasMLSzBiDdHluPwOr2d2SWJoJxA=="}
+  [1m[36mUser Load (360.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 942ms (ActiveRecord: 361.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:15:26 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 11:15:26 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 1710ms (Views: 1708.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:16:05 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:16:05 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:16:18 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:16:18 +0530
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-06 11:17:14 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5IGA/Hug7uIUEs0XxTikyH9kJg2d/3G4cq8MI19AwvuEgdGdW8db1zkdtPdasMLSzBiDdHluPwOr2d2SWJoJxA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:17:14 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 11:17:14 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 172ms (Views: 170.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:17:30 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:17:30 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:44:42 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:44:42 +0530
+Started GET "/" for 127.0.0.1 at 2018-03-06 11:56:43 +0530
+  [1m[35m (90.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 86ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 11:56:45 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (133.8ms)
+Completed 200 OK in 2050ms (Views: 1968.4ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:56:53 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:56:54 +0530
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-06 11:57:39 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 562ms (Views: 561.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:57:46 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:57:47 +0530
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-06 11:59:40 +0530
+  [1m[35m (72.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (346.1ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-06 11:59:44 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 735ms (Views: 733.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3563ms (Views: 3507.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:59:54 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 11:59:55 +0530
+Started GET "/users/auth/facebook/callback?code=AQCrftZgE-8Uculc1JL7DqzKZ3twe9anWurzz_ZTac0l8oFjJSiU1uZoVqw9QBRGIctmBBMfk5hIlFK-Z_srDuv2RGlRI_ZyqiCN81wxuenHOrF3DF63i0PTwU3ijQa5BWLq6RviLFXbzeOcpm1SovsTg_KFQ4M71pKca2Rj1zw2-2TA0didNXDzNOO0Q7ZyEzFTPkhT-65rQCN8FJSZtoOi3yJIwTjqZObR_MNPYvFGnvsblleJvij7W0drjRbZkwEi4gyboRvE36baZ5A5i7mVr16BljVublWPerVYpxrAbMsTDpyYkQFIVCXmUICOriK1367fO6ZV-dZNuVzalDex&state=c723ea8f926ee25ccc3f79516c94b0380fc4e9ec27592c1f" for 127.0.0.1 at 2018-03-06 12:01:31 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCrftZgE-8Uculc1JL7DqzKZ3twe9anWurzz_ZTac0l8oFjJSiU1uZoVqw9QBRGIctmBBMfk5hIlFK-Z_srDuv2RGlRI_ZyqiCN81wxuenHOrF3DF63i0PTwU3ijQa5BWLq6RviLFXbzeOcpm1SovsTg_KFQ4M71pKca2Rj1zw2-2TA0didNXDzNOO0Q7ZyEzFTPkhT-65rQCN8FJSZtoOi3yJIwTjqZObR_MNPYvFGnvsblleJvij7W0drjRbZkwEi4gyboRvE36baZ5A5i7mVr16BljVublWPerVYpxrAbMsTDpyYkQFIVCXmUICOriK1367fO6ZV-dZNuVzalDex", "state"=>"c723ea8f926ee25ccc3f79516c94b0380fc4e9ec27592c1f"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (9.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (26.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (14.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `provider`, `uid`) VALUES ('jeyasundharam33@gmail.com', '$2a$11$t2W5EkBReco9PnlG.HjcOOqJFuNx9vT8PaGzoWcYQXSo7hG7F2jlO', '2018-03-06 06:31:32', '2018-03-06 06:31:32', 'facebook', '786938158170422')[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (53.9ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2018-03-06 06:31:32', `last_sign_in_at` = '2018-03-06 06:31:32', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 1[0m
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 494ms (ActiveRecord: 166.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 12:01:33 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 221ms (Views: 132.2ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-06 12:02:52 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z5C/xvdEXk616zytZKpsXGjdkQSUYhKAXJmGrICKxOzZEHFlRR5+3E0IL5+1VREljHWhjp5sdnGAQv9JNuXozw=="}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 12:02:52 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 12:02:52 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 188ms (Views: 157.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 12:06:45 +0530
+  [1m[35m (47.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/auth/facebook/callback?code=AQDd-2OXrjNmOpa0f47bA_SZxlj4ZDNg5B3rRXUi-zoDCBoMsFvVsOBVeCZSCT88KK2l9DohbG7Y7ItUeDqoj9Qkzf-1qsLGe3DinqmMNBlRj4KTXrL1GDvXmQRRvWV2filM7u4GXUQUj28fo8OS9p6E-pGc5uggsFJyHQNdBOqgOd58DQ63of3G6vzm5EwW2QjA4lxdbNPX3f2Ftt9SKHzxjCbidj81IXeZCeKGCmyQvJus5yk4Ba1_HTU7xmG8wwntCSqIrqvrWe2c5ByxsqAqXSG12Ejuc7HnizkzBsz6WaQfJP68_s92mDiaNNmCZ7-mtq-3-LgtEsEGfUCfL83a&state=80a44cff67145c86256af2744d1c2413e864b522c227815f" for 127.0.0.1 at 2018-03-06 12:06:46 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDd-2OXrjNmOpa0f47bA_SZxlj4ZDNg5B3rRXUi-zoDCBoMsFvVsOBVeCZSCT88KK2l9DohbG7Y7ItUeDqoj9Qkzf-1qsLGe3DinqmMNBlRj4KTXrL1GDvXmQRRvWV2filM7u4GXUQUj28fo8OS9p6E-pGc5uggsFJyHQNdBOqgOd58DQ63of3G6vzm5EwW2QjA4lxdbNPX3f2Ftt9SKHzxjCbidj81IXeZCeKGCmyQvJus5yk4Ba1_HTU7xmG8wwntCSqIrqvrWe2c5ByxsqAqXSG12Ejuc7HnizkzBsz6WaQfJP68_s92mDiaNNmCZ7-mtq-3-LgtEsEGfUCfL83a", "state"=>"80a44cff67145c86256af2744d1c2413e864b522c227815f"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.8ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-06 06:36:47', `sign_in_count` = 2, `updated_at` = '2018-03-06 06:36:47' WHERE `users`.`id` = 1[0m
+  [1m[35m (66.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 105.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 12:06:47 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 548ms (Views: 481.0ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-06 13:06:00 +0530
+  [1m[35m (425.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (33.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vzvnVPhTUboxN3s0cJxVspsd9U2HuJ0Pbvf9z0jIu+/oTJzu5x3Im7wCx8FB/rZPFDKXBRnR5/FLEhY8rKBbyQ=="}
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (18.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 686ms (ActiveRecord: 279.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:06:04 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 13:06:04 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 1712ms (Views: 1692.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:06:10 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:06:10 +0530
+Started GET "/users/auth/facebook/callback?code=AQDi-wxhnqxNwX9WtwbPy_J8TwSAQlp0ZeJeKgpjFBZ3FkdP4TjNGRwbvuPG1xgrdVvdnWbO82-a2i2IQPWfEfKxUcphtoDLMXGhUT_tKKmutwCKGiq_gt5eE6XAahUwHpGHz2H3WVdqZXgf7cIZRdjxTs-BYN_1YnJ0Ind22Kw6Uo7Kux5nX9GrA2nnVrXx9wSGd1sM2F7wEZGcZx0nosDhDLYnLlAiaqPG5kwz5VEBwTpwOScIW21kuJM8h0GfSt6pL-nqVY3bqbVqCUZMYYklfBP6TU3qxjGsswLtuJVcnVKWA2F_30-ACF6VkGNciatL9LSO6osWhomWNHwQMlha&state=9cb4a6acf800562bdc8fee8fbe79a0eb884b180d549826b0" for 127.0.0.1 at 2018-03-06 13:06:24 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDi-wxhnqxNwX9WtwbPy_J8TwSAQlp0ZeJeKgpjFBZ3FkdP4TjNGRwbvuPG1xgrdVvdnWbO82-a2i2IQPWfEfKxUcphtoDLMXGhUT_tKKmutwCKGiq_gt5eE6XAahUwHpGHz2H3WVdqZXgf7cIZRdjxTs-BYN_1YnJ0Ind22Kw6Uo7Kux5nX9GrA2nnVrXx9wSGd1sM2F7wEZGcZx0nosDhDLYnLlAiaqPG5kwz5VEBwTpwOScIW21kuJM8h0GfSt6pL-nqVY3bqbVqCUZMYYklfBP6TU3qxjGsswLtuJVcnVKWA2F_30-ACF6VkGNciatL9LSO6osWhomWNHwQMlha", "state"=>"9cb4a6acf800562bdc8fee8fbe79a0eb884b180d549826b0"}
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '787310591466512' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (73.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35m (6.1ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 477ms (ActiveRecord: 95.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-06 13:06:27 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 256ms (Views: 253.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-06 13:07:13 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N8iRZ+QTrRuyPq2lvprjXC4QVdE60AL3kVhEKxb9x1aaulMBnfXRLjwwl1kLTC5BAXHghUXzwISl5KQxVS/2UA==", "user"=>{"email"=>"jeyasundharam33@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 581ms (Views: 117.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-06 13:07:23 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KWVCssye86emW3cxswa1BZ8/XlwvSE2jSSilUpaRRpWEF4DUtXiPkihVTc0G0HgYsF7rCFBrj9B9lEVI1UN3kw==", "user"=>{"email"=>"jeyasundharam33@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 354ms (Views: 139.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:07:32 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:07:32 +0530
+Started GET "/users/auth/facebook/callback?code=AQCXK9lodec6JV9PzFKfGD77YyGQ-kIiqNRAvxOhlHSvbwFv77y2-Hr23jxMxYPfEq5bhD40plaXeT9S6dRgHM5MZjLYJ5yge0Jzm8JDTPY0o1ExjFj8ktOasdHohBHgaDs9lNM_Hyk080uRNKHTFfrmmouUuiuxLjvD4LEVFc1QbMnIrAYgI7a9r2VNyUuLXmTNHPfU_dLJ7EHd-Q90FVoBgyTEBf0J--6Xe9uhIliU76EloWPKfhfzXbp2mTE8zpL6Vt6dQ5g4XEPviBdrh5imnzaODo-OLvVbHNF63IgpYXMsQWlJ96kqT3T75NT048RWZJVHs12KKcsyCyyOuonV&state=188172822bedf2c6c958bd5c53c460f93f2e9bb1fac0b595" for 127.0.0.1 at 2018-03-06 13:07:32 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCXK9lodec6JV9PzFKfGD77YyGQ-kIiqNRAvxOhlHSvbwFv77y2-Hr23jxMxYPfEq5bhD40plaXeT9S6dRgHM5MZjLYJ5yge0Jzm8JDTPY0o1ExjFj8ktOasdHohBHgaDs9lNM_Hyk080uRNKHTFfrmmouUuiuxLjvD4LEVFc1QbMnIrAYgI7a9r2VNyUuLXmTNHPfU_dLJ7EHd-Q90FVoBgyTEBf0J--6Xe9uhIliU76EloWPKfhfzXbp2mTE8zpL6Vt6dQ5g4XEPviBdrh5imnzaODo-OLvVbHNF63IgpYXMsQWlJ96kqT3T75NT048RWZJVHs12KKcsyCyyOuonV", "state"=>"188172822bedf2c6c958bd5c53c460f93f2e9bb1fac0b595"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '787310591466512' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jeyasundharam33@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 210ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-06 13:07:33 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 110ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:14:31 +0530
+  [1m[35m (162.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 43ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 13:14:33 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (56.7ms)
+Completed 200 OK in 1660ms (Views: 1593.4ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:14:38 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:14:38 +0530
+Started GET "/users/auth/facebook/callback?code=AQBvtE-cSzw-jK0uvgdEXavHzqTm22FYlRmiXVxxsRTvpPY_mr7CxjrH9FCwIAj1NTQZTA62Uz321h5GihTTVJRYcdHud4TBkwN499ayKu1_e-BuJBhMN_BkcQruhWd9dorS6Jy-SgoeacnkdbHJiz0FinkcAcGHsbSempaIg9p93tfcDgYquej7VITrVpRCZ2BidP5KCjV2AHd0S40ysko87AKVrjPepOI8nnpDpVLK7XYHYK9PJTkNWq4m79rIez7jHFkCHDdEdoB_u4cUIvoy9aJI4cgNl_PysXX9DUmycPY_VQ6S4rjHUbCdFJZUteQWwmfFNmjXJItZRTArlX_S&state=97b3b089764d4c3279f9563e4c4a4b74e00006dd24973c39" for 127.0.0.1 at 2018-03-06 13:14:39 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBvtE-cSzw-jK0uvgdEXavHzqTm22FYlRmiXVxxsRTvpPY_mr7CxjrH9FCwIAj1NTQZTA62Uz321h5GihTTVJRYcdHud4TBkwN499ayKu1_e-BuJBhMN_BkcQruhWd9dorS6Jy-SgoeacnkdbHJiz0FinkcAcGHsbSempaIg9p93tfcDgYquej7VITrVpRCZ2BidP5KCjV2AHd0S40ysko87AKVrjPepOI8nnpDpVLK7XYHYK9PJTkNWq4m79rIez7jHFkCHDdEdoB_u4cUIvoy9aJI4cgNl_PysXX9DUmycPY_VQ6S4rjHUbCdFJZUteQWwmfFNmjXJItZRTArlX_S", "state"=>"97b3b089764d4c3279f9563e4c4a4b74e00006dd24973c39"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (166.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-06 07:44:40', `last_sign_in_at` = '2018-03-06 06:36:47', `sign_in_count` = 3, `updated_at` = '2018-03-06 07:44:40' WHERE `users`.`id` = 1[0m
+  [1m[35m (166.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 367ms (ActiveRecord: 334.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:14:40 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 523ms (Views: 209.4ms | ActiveRecord: 200.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-06 13:32:05 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RuxiYEsO/IPzO6kDhhZHCOhJagJP7HBWGj6QYudbYvg+Q60khrs/vbLSQa1zHiacIp09HaOGVc54HbzhBowPfQ=="}
+  [1m[36mUser Load (316.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 755ms (ActiveRecord: 317.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:32:06 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 13:32:06 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 801ms (Views: 798.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:32:11 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:32:12 +0530
+Started GET "/users/auth/facebook/callback?code=AQAI9Fc6a_-WgBoxRqlrnDtHGMX_6mUf3z_SnP-2rNP6FIBYeA1E_j0iu_tfNV-Hq5B-L9ZgYlSkMfQ_urf8msqggi819RT6hieGZsz6YH8Zfhj4zVp85nls4ofEC6lbdqr3FGHRD56TaVTYcEngtHtLTvPXL2-Os4FVvi0wIWWlGcEMU3AMh-07oi1ldi_EizowrU8iv2vLvZFKRM_WiebUKhME661MEuXdPJ-cXKYAeSncfzBBwdITWvD-G8OqE8oHrSccAy1KkkWjAKL9MRRnBVPzAXQdxuXMJI32xaJ8y68U7qckui9UCjrhnJUTQaetRB-OuxyUHnozHPOYl9z8&state=ffc18178d6a788b7a3a09f27dc94b412032553803b95f990" for 127.0.0.1 at 2018-03-06 13:32:21 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAI9Fc6a_-WgBoxRqlrnDtHGMX_6mUf3z_SnP-2rNP6FIBYeA1E_j0iu_tfNV-Hq5B-L9ZgYlSkMfQ_urf8msqggi819RT6hieGZsz6YH8Zfhj4zVp85nls4ofEC6lbdqr3FGHRD56TaVTYcEngtHtLTvPXL2-Os4FVvi0wIWWlGcEMU3AMh-07oi1ldi_EizowrU8iv2vLvZFKRM_WiebUKhME661MEuXdPJ-cXKYAeSncfzBBwdITWvD-G8OqE8oHrSccAy1KkkWjAKL9MRRnBVPzAXQdxuXMJI32xaJ8y68U7qckui9UCjrhnJUTQaetRB-OuxyUHnozHPOYl9z8", "state"=>"ffc18178d6a788b7a3a09f27dc94b412032553803b95f990"}
+  [1m[36mUser Load (18.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (83.2ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-06 08:02:22', `last_sign_in_at` = '2018-03-06 07:44:40', `sign_in_count` = 4, `updated_at` = '2018-03-06 08:02:22' WHERE `users`.`id` = 1[0m
+  [1m[35m (110.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 248ms (ActiveRecord: 212.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:32:23 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 200ms (Views: 108.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-06 13:32:27 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lwZY6j7LDQu1ScFSqlTB3BUtkl8Af3HID+RUuE6ubCyAVnXlZvRbKRWlJiGj4ZA8LLa5murk9xlMYFDuv1BLeA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:32:27 +0530
+Processing by ProjectsController#insert as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-06 13:32:28 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 107ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:32:36 +0530
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2018-03-06 13:32:36 +0530
+Started GET "/users/auth/facebook/callback?code=AQD21Q5skBd1ahwfqr6XKoj8Yrh2jfDYYrAuK-WYemmvtFB9pb8JGDtmqAkjPkUGuQDSqHH7xNXKKUGf7AVGQxa1CGTWhja5YSAmC7-9LsceDXf0l2omLf7HB-1KeS4Bl5BdKgoO57wPKPqpOmfZO1TvPj8AQYXLxhVoNAZ7LyVASsJaIm9kF8R2AgQ1oSaoUVUHEZj-4UEfVpjE3yprJ8Cw7fvbT5bwsX2CPr4Ss42Y6AVMfC0rN8mXnJUwSdAQFvui8Y_YZkD5LqzYLmvlWgsmYfaUM-OpyWVgQCZUGoO0IYHuhdJjEA95GCYSO-3KZW8LmA2PQN02CCGb7nshRDH6&state=87e7f6afc9833be855d7a265118d2666fa12354a9b39b40e" for 127.0.0.1 at 2018-03-06 13:32:37 +0530
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQD21Q5skBd1ahwfqr6XKoj8Yrh2jfDYYrAuK-WYemmvtFB9pb8JGDtmqAkjPkUGuQDSqHH7xNXKKUGf7AVGQxa1CGTWhja5YSAmC7-9LsceDXf0l2omLf7HB-1KeS4Bl5BdKgoO57wPKPqpOmfZO1TvPj8AQYXLxhVoNAZ7LyVASsJaIm9kF8R2AgQ1oSaoUVUHEZj-4UEfVpjE3yprJ8Cw7fvbT5bwsX2CPr4Ss42Y6AVMfC0rN8mXnJUwSdAQFvui8Y_YZkD5LqzYLmvlWgsmYfaUM-OpyWVgQCZUGoO0IYHuhdJjEA95GCYSO-3KZW8LmA2PQN02CCGb7nshRDH6", "state"=>"87e7f6afc9833be855d7a265118d2666fa12354a9b39b40e"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`provider` = 'facebook' AND `users`.`uid` = '786938158170422' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (23.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2018-03-06 08:02:37', `last_sign_in_at` = '2018-03-06 08:02:22', `sign_in_count` = 5, `updated_at` = '2018-03-06 08:02:37' WHERE `users`.`id` = 1[0m
+  [1m[35m (37.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 61.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:32:37 +0530
+Processing by ProjectsController#insert as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering projects/insert.html.erb within layouts/application
+  Rendered projects/insert.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 106ms (Views: 100.2ms | ActiveRecord: 0.5ms)
+
+

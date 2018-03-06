@@ -280,7 +280,6 @@ Devise.setup do |config|
   #config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'email'
    config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'],
                 scope: 'public_profile,email', display: 'page',
-                raw_info_fields: 'phone'
                 info_fields: 'email,first_name,last_name,gender,birthday,currency,
                      location,about,interested_in,favorite_athletes,favorite_teams,
                      inspirational_people,quotes,website,work,
