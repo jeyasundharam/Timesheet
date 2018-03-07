@@ -287,7 +287,6 @@ Devise.setup do |config|
                     site: 'https://graph.facebook.com/v2.11',
                     authorize_url: "https://www.facebook.com/v2.11/dialog/oauth"
                 }
-   config.omniauth :google_oauth2, "790957556147-g9eh10673tj30b3ovej50bvh03oe8s1k.apps.googleusercontent.com",
-                   "PJNSEL-H1weqJsJAaeo69y9v", { name: "google" }
+   config.omniauth :google_oauth2, '382302395648-1leocuj6uioltm0qi3nr3p57uv0lo8u7.apps.googleusercontent.com', 'IIEsVK99VOXPCNgyT7bGSc4m',{scope: "email"}
    config.omniauth :github, '2f37fb6aa06a7505e3f4','78713a0e2e08aafcffd5d23bd2fc96ca5c304ee6', {scope: "email"}
  end

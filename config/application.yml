@@ -18,8 +18,8 @@ development:
   # FACEBOOK_APP_ID: " 1441600085969362"
   # FACEBOOK_APP_SECRET: "61ff5c7a6058b89481212662dd938d8c"
 
-  GOOGLE_CLIENT_ID: "790957556147-g9eh10673tj30b3ovej50bvh03oe8s1k.apps.googleusercontent.com"
-  GOOGLE_CLIENT_SECRET: " PJNSEL-H1weqJsJAaeo69y9v " 
+  # GOOGLE_CLIENT_ID: "790957556147-g9eh10673tj30b3ovej50bvh03oe8s1k.apps.googleusercontent.com"
+  # GOOGLE_CLIENT_SECRET: " PJNSEL-H1weqJsJAaeo69y9v " 
 # google :
 #   client id: " 790957556147-g9eh10673tj30b3ovej50bvh03oe8s1k.apps.googleusercontent.com "
 #   client secret: " PJNSEL-H1weqJsJAaeo69y9v "

@@ -10,14 +10,17 @@ class User < ApplicationRecord
   has_many :identities, dependent: :destroy
 
 
-  def self.from_omniauth(auth)
+  def self.from_omniauth(auth,sign)
+
 
         user = Identity.where(:provider => auth.provider, :uid => auth.uid).first
         unless user.nil?
             user.user
         else
             registered_user = User.where(:email => auth.info.email).first
-            unless registered_user.nil?
+            puts "Sign Value = #{sign}"
+           if sign==1
+            unless registered_user.nil? 
                         Identity.create!(
                               provider: auth.provider,
                               uid: auth.uid,
@@ -34,7 +37,9 @@ class User < ApplicationRecord
                             uid:auth.uid,
                               user_id: user.id
                     )
+                user
             end
+          end
         end
   end
   def self.new_with_session(params, session)
