@@ -9,12 +9,13 @@ gem 'nested_form'
 gem "jquery-rails"
 gem 'bootstrap-sass'
 # User Authentication
+
 gem 'devise'
 
 # User Authentication with Facebook
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-
+gem 'omniauth-github'
 
 # Development ENV Variables
 gem 'figaro'

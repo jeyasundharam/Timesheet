@@ -2,18 +2,40 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, 
-         :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook,:google_oauth2]
+         :rememberable, 
+         :trackable,
+         :validatable, :omniauthable, omniauth_providers: [:facebook,:google_oauth2,:github]
+
+
+  has_many :identities, dependent: :destroy
+
+
   def self.from_omniauth(auth)
-  	where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-    user.email = auth.info.email
-    user.provider = auth.provider
-    user.uid = auth.uid
-    user.password = Devise.friendly_token[0,20]
-     puts "Email = #{user.email}"
-     puts "Name = #{auth.info.name}"
-     puts auth
-  
-  	end
+
+        user = Identity.where(:provider => auth.provider, :uid => auth.uid).first
+        unless user.nil?
+            user.user
+        else
+            registered_user = User.where(:email => auth.info.email).first
+            unless registered_user.nil?
+                        Identity.create!(
+                              provider: auth.provider,
+                              uid: auth.uid,
+                              user_id: registered_user.id
+                              )
+                registered_user
+            else
+                user = User.create!(
+                            email: auth.info.email,
+                            password: Devise.friendly_token[0,20],
+                            )
+                user_provider = Identity.create!(
+                    provider:auth.provider,
+                            uid:auth.uid,
+                              user_id: user.id
+                    )
+            end
+        end
   end
   def self.new_with_session(params, session)
    super.tap do |user|
@@ -22,5 +44,4 @@ class User < ApplicationRecord
      end
    end
   end
-
 end

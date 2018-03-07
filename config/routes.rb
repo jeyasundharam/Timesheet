@@ -32,9 +32,7 @@ Rails.application.routes.draw do
   patch 'projects/updateproject', to: 'projects#updateproject'
 
   post 'tasks/update', to: 'tasks#update', as: 'tasks_update'
-
-  get 'auth/:provider/callback', to: 'sessions#create'
-  
+ get '/auth/github/callback'
   get 'auth/failure', to: redirect('/')
   
   get 'signout', to: 'sessions#destroy', as: 'signout'
