@@ -3,7 +3,8 @@ class Task < ApplicationRecord
   validates :title, presence: true
   validates :taskdate, presence: true
   validates :hours,
-            :inclusion => { :in => 0.0..8.0 ,:message => "Task Hours Not exceed 8 Hours"},
+             numericality: true,
+            :inclusion => { :in => 0.5..8.0 ,:message => "Task Hours Not exceed 8 Hours"},
             :presence => true
 end
 

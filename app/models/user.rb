@@ -26,7 +26,6 @@ class User < ApplicationRecord
                               uid: auth.uid,
                               user_id: registered_user.id
                               )
-                sign=3
                 registered_user
             else
                 user = User.create!(
@@ -38,7 +37,6 @@ class User < ApplicationRecord
                             uid:auth.uid,
                               user_id: user.id
                     )
-                sign=3
                 user
             end
           end

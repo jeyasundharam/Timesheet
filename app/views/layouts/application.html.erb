@@ -33,6 +33,13 @@ FB.getLoginStatus(function(response) {
 
 
 </script>
+<style>
+.cred
+{
+  color: red;
+}
+
+</style>
 
   </head>
 
@@ -52,8 +59,10 @@ FB.getLoginStatus(function(response) {
   <%= link_to "Login", new_user_session_path  %>
 <% end %>
     <br>
-     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+     <div class="cred">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
   
   </body>

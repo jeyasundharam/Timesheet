@@ -32,7 +32,7 @@
 <hr>
 <% end %>
 
-<%= nested_form_for @project,url: 'update' do |f| %>
+<%= nested_form_for @project ,url: {:controller=>"tasks",:action=>"create"} do |f| %>
 
  <%= f.hidden_field :id, value:@projects.id %>
 <table>

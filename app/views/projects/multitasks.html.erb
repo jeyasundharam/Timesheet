@@ -2,30 +2,72 @@
 <script>
 $(document).ready(function(){
   $("#checkform").on("click", function(event) {
+
     var s=0;
     $(".shours").each(function(){
-     s += parseFloat(this.value);
+
+    a= parseFloat(this.value);
+      s += a
     });
     if (s>8)
     {
-      $("#result").text("Total task Hours not exceed 8 Hours");
-      event.preventDefault();
+      $("#result").text("Total task Hours not exceed 8 Hours.");
     }
+    else if (s<0.5)
+    {
+      $("#result").text("Total task Hours not less than 0.5 Hour");
+    }
+     event.preventDefault();
+    $.ajax(
+      {
+        url: "updateajax",
+        type: "POST",
+        dataType: "json",
+        data: $('form').serialize(),
+        created: function(result){
+        $("form")[0].reset()  
+        $("#result").text("Task Added Successfully"); 
+        },
+        unprocessable_entity: function(result){
+        $("#result").text("Task not added");
+        }
+    });
+    // $.ajax("updateajax",$('form').serialize(),
+    //     function(data,status){
+    //         if (status=='success')
+    //         {
+    //         $("#result").html(data);
+    //         $("form")[0].reset()
+    //         }
+
+    //     });
+
+   
     });
 });
 
-function sumhours(value)
+function sumhours(a)
 {	
- if (value>8)
- {
 
-  document.getElementById("result").innerHTML = "Task Hours not exceed 8 Hours";
- }
+    if (a==0)
+    {
+      $("#result").text("Task hour should not 0 .");
+      event.preventDefault();
+    }
+    else if (a>8)
+    {
+      $("#result").text("Task hour should not exceed 8 Hours.");
+      event.preventDefault();
+    }
+    else if (a<0.5)
+    {
+      $("#result").text("Task hour should not lessthan 1 Hour.");
+      event.preventDefault();
+    }
 }
 </script>
 </head>
 <h1> Multi Tasks With with  Multi Project</h1> 
-
 <% if @errors %>
     <hr>
     <div id="error_explanation">
@@ -44,13 +86,13 @@ function sumhours(value)
 <div id="result">
 
 </div>
-<%= nested_form_for @project,url: projects_update_url do |f| %>
+<%= nested_form_for @project,remote:true, url: projects_updates_url do |f| %>
 
   select Task date : 
   <% if @taskdate %>
     <%= date_field(:obj, :taskdate, :value => @taskdate) %>
   <% else %>
-    <%= date_field(:obj, :taskdate) %>
+    <%= date_field(:obj, :taskdate,:required=>true) %>
   <% end %>
   
   <%= f.fields_for :tasks do |task_form|  %>
@@ -59,7 +101,8 @@ function sumhours(value)
   <%= task_form.collection_select(:project_id, Project.all, :id, :title) %></td></tr>
   <tr><td>Title</td><td><%= task_form.text_field :title %></td></tr>
   <tr><td>Description</td><td><%= task_form.text_field :description %></td></tr>
-  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours,:onchange => "sumhours(this.value)", :class => "shours" %></td></tr> 
+  <tr><td>Estimated Hours</td><td><%= task_form.text_field :hours,:onchange => "sumhours(this.value)", 
+  :class => "shours" %></td></tr> 
   <tr><td><%= task_form.link_to_remove "Remove this task" %></td></tr>
   </table>
   <% end %>

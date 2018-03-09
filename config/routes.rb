@@ -24,10 +24,16 @@ Rails.application.routes.draw do
   get 'projects/delete'
 
   get 'projects/multitasks', to: 'projects#multitasks', as: 'projects_update_tasks'
+
+  get 'projects/updatetasks', to: 'projects#updatetasks', as: 'projects_updatetasks'
+
+  get 'projects/update', to: 'projects#update', as: 'projects_updates'
+
+  get 'projects/iprojects', to: 'projects#iproject', as: 'projects_iproject'
   
   get 'projects/showtasks', to: 'projects#showtasks'
 
-  post 'projects/update', to: 'projects#update', as: 'projects_update'
+  post 'projects/updateajax', to: 'projects#updateajax', as: 'projects_updateajax'
 
   patch 'projects/updateproject', to: 'projects#updateproject'
 
