@@ -2,10 +2,10 @@
 <script>
 $(document).ready(function(){
   $("#checkform").on("click", function(event) {
-
+    $(".taskdate").val($("#obj_taskdate").val())
     var s=0;
+    $("[style='display: none;']").html("Empty");
     $(".shours").each(function(){
-
     a= parseFloat(this.value);
       s += a
     });
@@ -17,38 +17,39 @@ $(document).ready(function(){
     {
       $("#result").text("Total task Hours not less than 0.5 Hour");
     }
-     event.preventDefault();
     $.ajax(
       {
         url: "updateajax",
         type: "POST",
-        dataType: "json",
         data: $('form').serialize(),
-        created: function(result){
-        $("form")[0].reset()  
-        $("#result").text("Task Added Successfully"); 
-        },
-        unprocessable_entity: function(result){
-        $("#result").text("Task not added");
+        dataType: "json",
+        success: function(data,status){
+        var str='';
+        if(data.errors)
+        {
+         len=data.errors.length
+          if(len>0)
+          {
+          str+="<h2>"+len+" errors prohibited to add  Tasks. No tasks added</h2>";
+          for(i=0;i<len;i++)
+            str+="<li>"+data.errors[i]+"</li>";
+          }
         }
+        else if(data.success)
+        {
+           $("form")[0].reset()
+            str+="<h4>"+data.success+"</h4>";
+        }
+        str+="<hr>";
+        $("#result").html(str);
+      }
     });
-    // $.ajax("updateajax",$('form').serialize(),
-    //     function(data,status){
-    //         if (status=='success')
-    //         {
-    //         $("#result").html(data);
-    //         $("form")[0].reset()
-    //         }
-
-    //     });
-
-   
+     event.preventDefault();
     });
 });
 
 function sumhours(a)
 {	
-
     if (a==0)
     {
       $("#result").text("Task hour should not 0 .");
@@ -68,20 +69,6 @@ function sumhours(a)
 </script>
 </head>
 <h1> Multi Tasks With with  Multi Project</h1> 
-<% if @errors %>
-    <hr>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@errors.count, "error") %> 
-        prohibited  this Task from being saved:
-      </h2>
-      <ul>
-        <% @errors.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-   </div>
-<% end %>
 <hr>
 <div id="result">
 
@@ -96,6 +83,7 @@ function sumhours(a)
   <% end %>
   
   <%= f.fields_for :tasks do |task_form|  %>
+    <%= task_form.hidden_field :taskdate, :class=> "taskdate" %>
   <table border=1>
   <tr><td>Project title</td><td>
   <%= task_form.collection_select(:project_id, Project.all, :id, :title) %></td></tr>

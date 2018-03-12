@@ -68,110 +68,35 @@ class ProjectsController < ApplicationController
     end
     redirect_to projects_show_url
   end
-  
-  def update
-    @taskdate=params[:obj][:taskdate]
-    @tasks=params[:project][:tasks_attributes]
-    @errors=Array.new()
-    sum=k=0;
-    @tasks.each do |i|
-      j = @tasks[i]     
-      sum+=j["hours"].to_i
-       k+=1
-    end
-     @project=Project.new()
-        k.times{@project.tasks.build}
-        k=0
-        @tasks.each do |i|
-          j = @tasks[i]   
-          @project.tasks[k].project_id=j["project_id"]
-          @project.tasks[k].title=j["title"]
-          @project.tasks[k].description=j["description"]
-          @project.tasks[k].hours=j["hours"]
-          k+=1
-        end
-    @flag=false
-    remaining=8-Task.where(:taskdate => @taskdate).sum(:hours)
-    if sum > 8 || sum > remaining
-       @errors<<"Task Not Updated"
-       if sum > 8
-        @errors<<"Total Hours should be not exceed 8 hours "
-      end 
-      if sum > remaining
-        if remaining > 0
-          @errors<<"Your Task date #{@taskdate} had only #{remaining} remaining hours"
-        else
-          @errors<<"Your Task date #{@taskdate} had no hours"
-        end
-      end
-      @flag=true
-    else
 
-      @tasks.each do |i|
-        j = @tasks[i]
-        @task=Task.new(
-          :project_id => j["project_id"],
-          :taskdate=>@taskdate,
-          :title=>j["title"],
-          :description=>j["description"],
-          :hours=>j["hours"]
-        )
-        unless @task.valid?
-          @flag=true
-          break
-        end
-      end    
-      if @flag==false
-          @tasks.each do |i|
-            j = @tasks[i]
-            @task=Task.create(
-              :project_id => j["project_id"],
-              :taskdate=>@taskdate,
-              :title=>j["title"],
-              :description=>j["description"],
-              :hours=>j["hours"]
-            )
-            @task.save
-        end  
-     end 
-    end 
-    if @flag
-      @task.errors.full_messages.each do |i|
-      @errors<<i
-      end
-      render "multitasks"
-    else    
-      redirect_to projects_showtasks_url
-    end
+  def update
+
   end
   
   def updateajax
       @taskdate=params[:obj][:taskdate]
       @tasks=params[:project][:tasks_attributes]
+      sum=0;
       @errors=Array.new()
-      sum=k=0;
+      flag=false
       @tasks.each do |i|
-        j = @tasks[i]     
+        j = @tasks[i]    
+        @task=Task.new(:project_id => j["project_id"],:taskdate=>@taskdate, :title=>j["title"],
+          :description=>j["description"],:hours=>j["hours"])
+        unless @task.valid?
+           @task.errors.full_messages.each do |i|
+                     @errors<<i
+            end
+           flag=true
+           break
+        end
         sum+=j["hours"].to_i
-        k+=1
       end
-      @project=Project.new()
-      k.times{@project.tasks.build}
-      k=0
-      @tasks.each do |i|
-          j = @tasks[i]   
-          @project.tasks[k].project_id=j["project_id"]
-          @project.tasks[k].title=j["title"]
-          @project.tasks[k].description=j["description"]
-          @project.tasks[k].hours=j["hours"]
-          k+=1
-      end
-      @flag=false
       remaining=8-Task.where(:taskdate => @taskdate).sum(:hours)
-      if sum > 8 || sum > remaining
+      if sum > 8 || sum > remaining || flag
          @errors<<"Task Not Updated"
          if sum > 8
-            @errors<<"Total Hours should be not exceed 8 hours "
+            @errors<<"Total Hours should be not exceed 8 hours."
          end 
          if sum > remaining
             if remaining > 0
@@ -180,53 +105,24 @@ class ProjectsController < ApplicationController
                   @errors<<"Your Task date #{@taskdate} had no hours"
             end
         end
-        @flag=true
+        render :json => {:errors => @errors }
       else
-          @tasks.each do |i|
-            j = @tasks[i]
-            @task=Task.new(
-                :project_id => j["project_id"],
-                :taskdate=>@taskdate,
-                :title=>j["title"],
-                :description=>j["description"],
-                :hours=>j["hours"]
-            )
-            unless @task.valid?
-                @flag=true
-                break
-            end
-          end
-          if @flag==false
-             @tasks.each do |i|
-                j = @tasks[i]
-                @task=Task.create(
-                    :project_id => j["project_id"],
-                    :taskdate=>@taskdate,
-                    :title=>j["title"],
-                    :description=>j["description"],
-                    :hours=>j["hours"]
-                )
-                @task.save
-              end  
-          else
-              @task.errors.full_messages.each do |i|
-                 @errors<<i
-              end
-          end
+        @task=Task.create(task_params)
+        @task.save
+        # @tasks.each do |i|
+        #    j = @tasks[i]
+        #    @task=Task.create(:project_id => j["project_id"],:taskdate=>@taskdate, :title=>j["title"],
+        #   :description=>j["description"],:hours=>j["hours"])
+        #    @task.save
+        # end
+        render :json => {:success => "Tasks Added Successfully"}
       end
-    respond_to do |format|
-    if @flag==false
-      # format.html { redirect_to @user, notice: 'Task was successfully Added.' }
-      # format.js
-      format.json { render json: @project, status: :created, location: @user }
-    else
-      # format.html { render action: "new" }
-      format.json { render json: @errors, status: :unprocessable_entity }
-    end
   end
-end
-
   def project_params
     params.require(:project).permit(:title,:description)
+  end  
+  def task_params
+    params.require(:project).permit(tasks_attributes: [:project_id,:taskdate,:title,:description,:hours])
   end
+
 end

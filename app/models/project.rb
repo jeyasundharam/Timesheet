@@ -4,6 +4,10 @@ class Project < ApplicationRecord
                                   allow_destroy: true
     validates :title, presence: true, length: { minimum: 5 }, uniqueness: true
     validates :description, presence: true
+
+    def insertdate(str)
+    	self.taskdate=str
+    end
    end
 
 # attr_accessor :tasks_attributes
